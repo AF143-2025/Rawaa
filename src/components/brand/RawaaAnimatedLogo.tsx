@@ -30,35 +30,22 @@ export default function RawaaAnimatedLogo({
   }
 
   /* ================================================================
-     NAVBAR VARIANT – compact brand with isolated emblem
+     NAVBAR VARIANT – standalone prominent logo (no text beside it)
      ================================================================ */
   if (variant === 'navbar') {
     return (
-      <div className={`flex items-center gap-3 select-none ${className}`}>
-        {/* Exact Isolated Emblem */}
-        <div className="relative w-11 h-11 flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+      <div className={`relative flex items-center justify-center select-none ${className}`}>
+        {/* Prominent Exact Isolated Logo */}
+        <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
           <img
             src="/brand/rawaa_exact_emblem_only.png"
-            alt="رواء"
-            className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(2,132,199,0.35)]"
+            alt="شعار رواء"
+            className="w-full h-full object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.18)] drop-shadow-[0_4px_16px_rgba(2,132,199,0.35)] filter contrast-[1.05]"
           />
-          {/* Subtle orbiting cyber dot */}
-          <div className="absolute inset-[-4px] animate-spin-slow pointer-events-none">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_6px_rgba(0,229,255,0.8)]" />
+          {/* Subtle orbiting cyber node */}
+          <div className="absolute inset-[-5px] animate-spin-slow pointer-events-none">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(0,229,255,0.9)]" />
           </div>
-        </div>
-
-        {/* Brand Typography */}
-        <div className="flex flex-col">
-          <div className="flex items-center gap-1.5">
-            <span className="text-2xl font-black tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors">
-              رِوَاء
-            </span>
-            <span className="w-2 h-2 rounded-full bg-cyan-400 inline-block animate-pulse shadow-[0_0_6px_rgba(0,229,255,0.6)]" />
-          </div>
-          <span className="text-[10px] font-mono tracking-[0.25em] text-sky-600 uppercase -mt-1 font-extrabold">
-            RAWAA ACADEMY
-          </span>
         </div>
       </div>
     );
