@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
-import { dataStore } from '@/lib/store';
+import { dataStore, DEMO_STUDENT } from '@/lib/store';
 import { Course, Enrollment, Certificate } from '@/types';
 import { 
   Award, 
@@ -30,30 +30,16 @@ export default function StudentDashboardPage() {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
-  useEffect(() => {
-    if (user) {
-      const enr = dataStore.getEnrollments(user.id);
-      setEnrollments(enr);
-      const allC = dataStore.getCourses();
-      setCourses(allC);
-      const certs = dataStore.getCertificates(user.id);
-      setCertificates(certs);
-    }
-  }, [user]);
+  const currentUser = user || DEMO_STUDENT;
 
-  if (!user) {
-    return (
-      <div className="max-w-md mx-auto px-4 py-24 text-center space-y-4">
-        <h2 className="text-xl font-bold text-white">يرجى تسجيل الدخول للوصول إلى لوحة التحكم</h2>
-        <Link
-          href="/login"
-          className="inline-block px-6 py-2.5 rounded-xl bg-cyan-500 text-black font-bold text-xs shadow-glow"
-        >
-          تسجيل الدخول
-        </Link>
-      </div>
-    );
-  }
+  useEffect(() => {
+    const enr = dataStore.getEnrollments(currentUser.id);
+    setEnrollments(enr);
+    const allC = dataStore.getCourses();
+    setCourses(allC);
+    const certs = dataStore.getCertificates(currentUser.id);
+    setCertificates(certs);
+  }, [currentUser]);
 
   // Enrolled courses details
   const enrolledCourses = enrollments.map(enr => {
@@ -76,17 +62,17 @@ export default function StudentDashboardPage() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
           <div className="flex items-center gap-4">
             <img
-              src={user.avatar_url || `https://api.dicebear.com/7.x/bottts/svg?seed=${user.full_name}`}
-              alt={user.full_name}
+              src={currentUser.avatar_url || `https://api.dicebear.com/7.x/bottts/svg?seed=${currentUser.full_name}`}
+              alt={currentUser.full_name}
               className="w-16 h-16 rounded-2xl border-2 border-cyan-400/50 object-cover shadow-glow"
             />
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
-                  مرحباً بك، {user.full_name} 👋
+                  مرحباً بك، {currentUser.full_name} 👋
                 </h1>
                 <span className="text-xs px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-mono">
-                  {user.role === 'admin' ? 'مدير المنصة' : 'طالب تقني'}
+                  {currentUser.role === 'admin' ? 'مدير المنصة' : 'طالب تقني'}
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-gray-400">
@@ -98,7 +84,7 @@ export default function StudentDashboardPage() {
           {/* Quick Metrics */}
           <div className="flex items-center gap-3 bg-[#070B12] p-3 rounded-2xl border border-white/10 shrink-0 text-center">
             <div className="px-3">
-              <span className="text-xl font-bold font-mono text-cyan-400 block">{user.points || 0}</span>
+              <span className="text-xl font-bold font-mono text-cyan-400 block">{currentUser.points || 0}</span>
               <span className="text-[10px] text-gray-400">النقاط المكتسبة</span>
             </div>
             <div className="w-px h-8 bg-white/10" />

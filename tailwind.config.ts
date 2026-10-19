@@ -9,22 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#080C14",
-        foreground: "#F8FAFC",
+        background: "#081E36",
+        foreground: "#F0F9FF",
         rawaa: {
-          bg: "#070B12",
-          card: "#0E1524",
-          cardBorder: "#1E293B",
-          cardHover: "#131C31",
-          primary: "#06B6D4",      // Cyan
-          primaryGlow: "rgba(6, 182, 212, 0.25)",
-          secondary: "#38BDF8",    // Sky blue
-          accent: "#10B981",       // Tech Green
-          accentGlow: "rgba(16, 185, 129, 0.25)",
-          purple: "#8B5CF6",       // Cyber purple
-          navy: "#0F172A",
-          muted: "#94A3B8",
-          darker: "#030712",
+          bg: "#081E36",           // Sky Navy / Deep Celestial Blue
+          card: "#0C2E52",         // Rich Sky-Blue Card Surface
+          cardBorder: "#1E4A78",   // Sky Border
+          cardHover: "#103C6B",
+          primary: "#38BDF8",      // Celestial Sky Blue
+          primaryGlow: "rgba(56, 189, 248, 0.35)",
+          secondary: "#0284C7",    // Deep Sky Blue
+          accent: "#34D399",       // Tech Mint Green
+          accentGlow: "rgba(52, 211, 153, 0.25)",
+          purple: "#818CF8",       // Indigo / Cyber Violet
+          navy: "#0A2544",
+          muted: "#BAE6FD",
+          darker: "#041222",
         },
       },
       fontFamily: {
@@ -32,9 +32,9 @@ const config: Config = {
         mono: ["JetBrains Mono", "monospace"],
       },
       boxShadow: {
-        glow: "0 0 25px -5px rgba(6, 182, 212, 0.3)",
-        glowGreen: "0 0 25px -5px rgba(16, 185, 129, 0.3)",
-        glowPurple: "0 0 25px -5px rgba(139, 92, 246, 0.3)",
+        glow: "0 0 30px -4px rgba(56, 189, 248, 0.45)",
+        glowGreen: "0 0 30px -4px rgba(52, 211, 153, 0.4)",
+        glowPurple: "0 0 30px -4px rgba(129, 140, 248, 0.4)",
       },
     },
   },

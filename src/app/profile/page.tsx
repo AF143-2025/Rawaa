@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
-import { dataStore } from '@/lib/store';
+import { dataStore, DEMO_STUDENT } from '@/lib/store';
 import { User, Mail, Award, Sparkles, CheckCircle2, ArrowRight, Shield } from 'lucide-react';
 
 export default function ProfilePage() {
@@ -12,16 +12,7 @@ export default function ProfilePage() {
   const [bio, setBio] = useState(user?.bio || '');
   const [isSaved, setIsSaved] = useState(false);
 
-  if (!user) {
-    return (
-      <div className="max-w-md mx-auto px-4 py-20 text-center space-y-4">
-        <h2 className="text-xl font-bold text-white">يرجى تسجيل الدخول لعرض الملف الشخصي</h2>
-        <Link href="/login" className="px-5 py-2.5 rounded-xl bg-cyan-500 text-black font-bold text-xs">
-          تسجيل الدخول
-        </Link>
-      </div>
-    );
-  }
+  const currentUser = user || DEMO_STUDENT;
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,7 +25,7 @@ export default function ProfilePage() {
     setTimeout(() => setIsSaved(false), 3000);
   };
 
-  const certificates = dataStore.getCertificates(user.id);
+  const certificates = dataStore.getCertificates(currentUser.id);
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
@@ -53,22 +44,22 @@ export default function ProfilePage() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-white/10">
           <div className="flex items-center gap-4">
             <img
-              src={user.avatar_url || `https://api.dicebear.com/7.x/bottts/svg?seed=${user.full_name}`}
-              alt={user.full_name}
+              src={currentUser.avatar_url || `https://api.dicebear.com/7.x/bottts/svg?seed=${currentUser.full_name}`}
+              alt={currentUser.full_name}
               className="w-20 h-20 rounded-2xl border-2 border-cyan-400 object-cover shadow-glow"
             />
             <div className="space-y-1">
-              <h1 className="text-2xl font-bold text-white">{user.full_name}</h1>
-              <span className="text-xs text-gray-400 font-mono block">{user.email}</span>
+              <h1 className="text-2xl font-bold text-white">{currentUser.full_name}</h1>
+              <span className="text-xs text-gray-400 font-mono block">{currentUser.email}</span>
               <span className="text-xs px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-mono inline-block">
-                {user.role === 'admin' ? 'مسؤول النظام (Admin)' : 'طالب مسجل'}
+                {currentUser.role === 'admin' ? 'مسؤول النظام (Admin)' : 'طالب مسجل'}
               </span>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <div className="p-3 bg-[#070B12] rounded-2xl border border-white/5 text-center min-w-[100px]">
-              <span className="text-xl font-bold font-mono text-cyan-400 block">{user.points || 0}</span>
+              <span className="text-xl font-bold font-mono text-cyan-400 block">{currentUser.points || 0}</span>
               <span className="text-[10px] text-gray-400">نقطة تميز</span>
             </div>
             <div className="p-3 bg-[#070B12] rounded-2xl border border-white/5 text-center min-w-[100px]">
@@ -98,7 +89,7 @@ export default function ProfilePage() {
             <input
               type="email"
               disabled
-              value={user.email}
+              value={currentUser.email}
               className="w-full bg-white/[0.02] border border-white/5 rounded-xl px-4 py-2.5 text-xs text-gray-500 font-mono cursor-not-allowed"
               dir="ltr"
             />

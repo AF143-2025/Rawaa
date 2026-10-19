@@ -4,7 +4,7 @@ import { Shield, Award, Globe, Share2, Code2 } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#04070D] border-t border-white/10 text-gray-400 text-xs mt-24">
+    <footer className="bg-[#05182C] border-t border-sky-400/20 text-sky-200/70 text-xs mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           

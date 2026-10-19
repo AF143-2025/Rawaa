@@ -130,8 +130,8 @@ export default function HomePage() {
           {/* Call to Actions */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
-              href="/register"
-              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-sky-400 hover:from-cyan-400 hover:to-sky-300 text-black font-extrabold text-sm shadow-glow hover:scale-105 transition-all flex items-center gap-2"
+              href="/courses"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-black font-extrabold text-sm shadow-glow hover:scale-105 transition-all flex items-center gap-2"
             >
               ابدأ رحلتك الآن مجاناً
               <ArrowLeft className="w-4 h-4" />
@@ -653,8 +653,8 @@ export default function HomePage() {
           </p>
           <div className="pt-2">
             <Link
-              href="/register"
-              className="px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-black font-extrabold text-sm shadow-glow hover:scale-105 transition-all inline-flex items-center gap-2"
+              href="/courses"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-black font-extrabold text-sm shadow-glow hover:scale-105 transition-all inline-flex items-center gap-2"
             >
               ابدأ التعلّم والتطبيق الآن
               <ArrowLeft className="w-4 h-4" />
