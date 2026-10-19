@@ -52,21 +52,21 @@ export default function HomePage() {
     <div className="space-y-24 pb-20 cyber-grid bg-white min-h-screen">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-10 md:pt-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+      <section className="relative pt-1 sm:pt-2 md:pt-3 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
         {/* Soft pastel ambient glow orbs */}
-        <div className="absolute top-10 right-1/4 w-96 h-96 glow-orb-cyan pointer-events-none" />
-        <div className="absolute top-20 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
+        <div className="absolute top-4 right-1/4 w-96 h-96 glow-orb-cyan pointer-events-none" />
+        <div className="absolute top-10 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
 
-        <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center space-y-3 max-w-4xl mx-auto">
           {/* Hero Brand Identity Showcase */}
-          <div className="flex flex-col items-center justify-center space-y-4">
+          <div className="flex flex-col items-center justify-center">
 
             {/* Professional Vector Animated RAWAA Emblem */}
             <RawaaAnimatedLogo variant="hero" showSubtitle={false} />
           </div>
 
           {/* Hero Slogan & Description */}
-          <div className="space-y-3 max-w-2xl mx-auto text-center pt-2">
+          <div className="space-y-2 max-w-2xl mx-auto text-center pt-1">
             <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center justify-center gap-2">
               <span>رواء | RAWAA Academy</span>
               <span className="text-xl">🛡️</span>
