@@ -94,7 +94,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
 
           {/* Prominent Core Subject Headline */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight max-w-4xl mx-auto pt-2">
