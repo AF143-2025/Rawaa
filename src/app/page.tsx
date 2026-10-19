@@ -66,17 +66,33 @@ export default function HomePage() {
           </div>
 
           {/* Hero Slogan & Description */}
-          <div className="space-y-2 max-w-2xl mx-auto text-center pt-1">
+          <div className="space-y-3 max-w-2xl mx-auto text-center pt-1">
             <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center justify-center gap-2">
-              <span>رواء | RAWAA Academy</span>
+              <span>رواء | RAWAA</span>
               <span className="text-xl">🛡️</span>
             </h2>
-            <p className="text-base sm:text-lg font-extrabold text-sky-600 tracking-wide">
-              تعلّيم، تطوّير، واحتَرِاف.
-            </p>
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed">
-              منصتج لتعلّم الأمن السيبراني وبناء مهاراتج المستقبلية
-            </p>
+
+            {/* Rectangular Badges for Values */}
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+              <span className="px-4 py-1.5 rounded-lg bg-sky-50 border border-sky-200 text-sky-700 font-extrabold text-xs sm:text-sm shadow-sm">
+                تعلّيم
+              </span>
+              <span className="text-slate-300 font-bold">•</span>
+              <span className="px-4 py-1.5 rounded-lg bg-cyan-50 border border-cyan-200 text-cyan-700 font-extrabold text-xs sm:text-sm shadow-sm">
+                تطوّير
+              </span>
+              <span className="text-slate-300 font-bold">•</span>
+              <span className="px-4 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 font-extrabold text-xs sm:text-sm shadow-sm">
+                واحتَرِاف
+              </span>
+            </div>
+
+            {/* Rectangular Card for Platform Tagline */}
+            <div className="pt-1">
+              <div className="inline-block px-5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs sm:text-sm font-semibold shadow-sm">
+                منصتج لتعلّم الأمن السيبراني وبناء مهاراتج المستقبلية
+              </div>
+            </div>
           </div>
 
           {/* Call to Actions */}
