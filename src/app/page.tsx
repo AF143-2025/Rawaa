@@ -52,10 +52,10 @@ export default function HomePage() {
     <div className="space-y-24 pb-20 cyber-grid bg-white min-h-screen">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-1 sm:pt-2 md:pt-3 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+      <section className="relative pt-6 sm:pt-8 md:pt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
         {/* Soft pastel ambient glow orbs */}
-        <div className="absolute top-4 right-1/4 w-96 h-96 glow-orb-cyan pointer-events-none" />
-        <div className="absolute top-10 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
+        <div className="absolute top-6 right-1/4 w-96 h-96 glow-orb-cyan pointer-events-none" />
+        <div className="absolute top-12 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
 
         <div className="relative z-10 text-center space-y-3 max-w-4xl mx-auto">
           {/* Hero Brand Identity Showcase */}
