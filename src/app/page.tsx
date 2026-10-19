@@ -63,21 +63,65 @@ export default function HomePage() {
         <div className="absolute top-20 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
 
         <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs text-cyan-300 font-mono shadow-glow">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
-            <span>المنصة التفاعلية الأولى في العالم العربي للتقنيات الدفاعية</span>
+          {/* Hero Brand Identity Showcase */}
+          <div className="flex flex-col items-center justify-center space-y-4">
+            
+            {/* Cyber Pill Tag */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-950/80 via-[#0F172A] to-emerald-950/80 border border-cyan-500/30 text-xs font-mono text-cyan-300 shadow-glow backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <span className="font-semibold tracking-wide">المنصة التفاعلية الأولى للتقنيات والأنظمة الدفاعية</span>
+            </div>
+
+            {/* Magnificent Brand Logo & Typography */}
+            <div className="relative group select-none py-2">
+              {/* Ambient Glow behind the logo */}
+              <div className="absolute -inset-6 bg-gradient-to-r from-cyan-500/25 via-sky-500/15 to-emerald-500/25 rounded-full blur-3xl opacity-80 pointer-events-none" />
+
+              <div className="relative flex flex-col items-center">
+                {/* Icon Shield Crest */}
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-tr from-cyan-500 via-sky-400 to-emerald-400 p-0.5 shadow-2xl shadow-cyan-500/40 mb-3 transform hover:scale-105 transition-transform duration-300">
+                  <div className="w-full h-full bg-[#070B12] rounded-[22px] flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/15 to-transparent pointer-events-none" />
+                    <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-cyan-400 drop-shadow-[0_0_20px_rgba(6,182,212,0.9)]" />
+                  </div>
+                </div>
+
+                {/* Main Arabic Name: رِوَاء */}
+                <div className="flex items-center justify-center">
+                  <span className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-cyan-100 to-cyan-400 drop-shadow-[0_4px_35px_rgba(6,182,212,0.45)] font-sans">
+                    رِوَاء
+                  </span>
+                </div>
+
+                {/* English Branding with Cyber Line Dividers */}
+                <div className="flex items-center gap-3 mt-1">
+                  <div className="w-10 sm:w-20 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-cyan-400" />
+                  <span className="text-sm sm:text-base font-mono tracking-[0.35em] uppercase text-cyan-300 font-extrabold">
+                    RAWAA ACADEMY
+                  </span>
+                  <div className="w-10 sm:w-20 h-px bg-gradient-to-l from-transparent via-cyan-400/60 to-cyan-400" />
+                </div>
+
+                {/* Brand Category Tagline */}
+                <span className="text-xs sm:text-sm font-semibold text-gray-400 tracking-wider mt-2 font-sans">
+                  أكاديمية التدريب التقني وهندسة الأنظمة والدفاع السيبراني
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* Prominent Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight">
+          {/* Prominent Core Subject Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight max-w-4xl mx-auto pt-2">
             تعلّم <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-emerald-400">الشبكات</span> و <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Linux</span> و <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">الأمن السيبراني</span>
           </h1>
 
-          {/* Slogan & Description */}
-          <p className="text-lg sm:text-xl text-gray-300 font-medium leading-relaxed max-w-2xl mx-auto">
-            «تعلّم اليوم، واحمِ المستقبل.»
-          </p>
+          {/* Slogan Pill */}
+          <div className="inline-block px-6 py-2.5 rounded-2xl bg-cyan-950/40 border border-cyan-500/30 shadow-inner">
+            <p className="text-base sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-emerald-300">
+              «تعلّم اليوم، واحمِ المستقبل.»
+            </p>
+          </div>
 
           <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-relaxed">
             تجمع منصة <strong>رواء</strong> بين الشرح النظري العميق والتدريب العملي المعزول داخل المتصفح. ابنِ أساساً هندسياً صلباً وانطلق من الصفر إلى مستويات متقدمة في البنية التحتية وحماية النظم.

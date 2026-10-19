@@ -42,18 +42,21 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 via-sky-400 to-emerald-400 p-0.5 shadow-glow group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-[#080D18] rounded-[10px] flex items-center justify-center">
-                <Shield className="w-5 h-5 text-cyan-400" />
+          <Link href="/" className="flex items-center gap-3.5 group">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-500 via-sky-400 to-emerald-400 p-0.5 shadow-glow group-hover:scale-105 transition-all duration-300">
+              <div className="w-full h-full bg-[#080D18] rounded-[14px] flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/15 to-transparent pointer-events-none" />
+                <Shield className="w-6 h-6 text-cyan-400 drop-shadow-[0_0_12px_rgba(6,182,212,0.85)]" />
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-extrabold tracking-tight text-white flex items-center gap-1">
-                رِواء
-                <span className="w-2 h-2 rounded-full bg-cyan-400 inline-block animate-pulse"></span>
-              </span>
-              <span className="text-[10px] font-mono tracking-widest text-cyan-400 uppercase -mt-1 font-bold">
+              <div className="flex items-center gap-1.5">
+                <span className="text-2xl sm:text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-cyan-300">
+                  رِوَاء
+                </span>
+                <span className="w-2 h-2 rounded-full bg-cyan-400 inline-block animate-pulse shadow-glow"></span>
+              </div>
+              <span className="text-[10px] font-mono tracking-[0.25em] text-cyan-400 uppercase -mt-1 font-bold">
                 RAWAA ACADEMY
               </span>
             </div>
