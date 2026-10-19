@@ -65,9 +65,19 @@ export default function HomePage() {
             <RawaaAnimatedLogo variant="hero" showSubtitle={false} />
           </div>
 
-          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            تجمع منصة <strong>رواء</strong> بين الشرح النظري العميق والتدريب العملي المعزول داخل المتصفح. ابنِ أساساً هندسياً صلباً وانطلق من الصفر إلى مستويات متقدمة في البنية التحتية وحماية النظم.
-          </p>
+          {/* Hero Slogan & Description */}
+          <div className="space-y-3 max-w-2xl mx-auto text-center pt-2">
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center justify-center gap-2">
+              <span>رواء | RAWAA Academy</span>
+              <span className="text-xl">🛡️</span>
+            </h2>
+            <p className="text-base sm:text-lg font-extrabold text-sky-600 tracking-wide">
+              تعلّيم، تطوّير، واحتَرِاف.
+            </p>
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed">
+              منصتج لتعلّم الأمن السيبراني وبناء مهاراتج المستقبلية
+            </p>
+          </div>
 
           {/* Call to Actions */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-3">
