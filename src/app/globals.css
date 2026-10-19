@@ -122,3 +122,51 @@ body {
   pointer-events: none;
   opacity: 0.6;
 }
+
+/* ===== ORBITING CIRCLES ANIMATIONS ===== */
+
+/* Orbit Ring 1 – Outer, slow clockwise (20s) */
+@keyframes orbit-1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-orbit-1 {
+  animation: orbit-1 20s linear infinite;
+}
+
+/* Orbit Ring 2 – Middle, counter-clockwise (14s) */
+@keyframes orbit-2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+.animate-orbit-2 {
+  animation: orbit-2 14s linear infinite;
+}
+
+/* Orbit Ring 3 – Inner, fast clockwise (9s) */
+@keyframes orbit-3 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-orbit-3 {
+  animation: orbit-3 9s linear infinite;
+}
+
+/* Navbar mini emblem – slow spin for tiny orbiting dot */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+/* Fade-in for tab transitions on /brand page */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+

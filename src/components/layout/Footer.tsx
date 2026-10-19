@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Award, Globe, Share2, Code2 } from 'lucide-react';
+import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
 export default function Footer() {
   return (
@@ -10,20 +11,8 @@ export default function Footer() {
           
           {/* Brand Col (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-11 h-11 flex items-center justify-center">
-                <img
-                  src="/logo.png"
-                  alt="رواء"
-                  className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(2,132,199,0.25)]"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-extrabold text-slate-900">رِواء</span>
-                <span className="text-[10px] font-mono tracking-widest text-sky-600 uppercase -mt-1 font-bold">
-                  RAWAA ACADEMY
-                </span>
-              </div>
+            <Link href="/" className="inline-block group focus:outline-none">
+              <RawaaAnimatedLogo variant="navbar" />
             </Link>
 
             <p className="text-sm text-slate-800 font-medium">

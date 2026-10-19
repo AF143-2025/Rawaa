@@ -9,6 +9,7 @@ import {
   ArrowLeft,
   BookOpen
 } from 'lucide-react';
+import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -31,25 +32,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 flex items-center justify-center">
-              <img
-                src="/logo.png"
-                alt="رواء"
-                className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(2,132,199,0.25)] group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="text-2xl font-black tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors">
-                  رِوَاء
-                </span>
-                <span className="w-2 h-2 rounded-full bg-sky-500 inline-block animate-pulse shadow-sm"></span>
-              </div>
-              <span className="text-[10px] font-mono tracking-[0.25em] text-sky-600 uppercase -mt-1 font-extrabold">
-                RAWAA ACADEMY
-              </span>
-            </div>
+          <Link href="/" className="group focus:outline-none">
+            <RawaaAnimatedLogo variant="navbar" />
           </Link>
 
           {/* Desktop Navigation Links */}

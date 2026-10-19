@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { INITIAL_TRACKS } from '@/lib/mockData';
 import { dataStore } from '@/lib/store';
+import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
 export default function HomePage() {
   const [faqOpenIdx, setFaqOpenIdx] = useState<number | null>(0);
@@ -59,40 +60,10 @@ export default function HomePage() {
         <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto">
           {/* Hero Brand Identity Showcase */}
           <div className="flex flex-col items-center justify-center space-y-4">
-            
-            {/* Cyber Pill Tag */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-mono text-sky-800 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-sky-500 animate-ping" />
-              <Sparkles className="w-3.5 h-3.5 text-sky-600" />
-              <span className="font-semibold tracking-wide">المنصة التفاعلية الأولى للتقنيات والأنظمة الدفاعية</span>
-            </div>
 
-            {/* Clean Transparent Logo Presentation without clutter */}
-            <div className="relative select-none py-2 flex flex-col items-center">
-              {/* Soft ambient aura */}
-              <div className="absolute -inset-8 bg-sky-200/40 rounded-full blur-3xl opacity-60 pointer-events-none animate-pulse" />
-
-              {/* Pure Transparent Logo */}
-              <div className="relative animate-logo-float transition-transform duration-300 hover:scale-105 cursor-pointer">
-                <img
-                  src="/logo.png"
-                  alt="رواء | RAWAA Academy"
-                  className="w-64 sm:w-80 md:w-96 max-w-full h-auto object-contain drop-shadow-[0_12px_24px_rgba(2,132,199,0.18)]"
-                />
-              </div>
-
-              {/* Subtitle Badge */}
-              <div className="mt-4 inline-flex items-center gap-2 px-5 py-2 rounded-full bg-sky-50 border border-sky-200 shadow-sm text-xs sm:text-sm font-bold font-sans text-sky-950">
-                <span className="w-2 h-2 rounded-full bg-sky-500 animate-ping" />
-                <span>الأكاديمية العربية المتخصصة في هندسة الشبكات ولينكس والأمن السيبراني</span>
-              </div>
-            </div>
+            {/* Professional Vector Animated RAWAA Emblem */}
+            <RawaaAnimatedLogo variant="hero" showSubtitle={false} />
           </div>
-
-          {/* Prominent Core Subject Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto pt-2">
-            تعلّم <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-cyan-600 to-teal-600">الشبكات</span> و <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Linux</span> و <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-sky-600 to-cyan-600">الأمن السيبراني</span>
-          </h1>
 
           <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             تجمع منصة <strong>رواء</strong> بين الشرح النظري العميق والتدريب العملي المعزول داخل المتصفح. ابنِ أساساً هندسياً صلباً وانطلق من الصفر إلى مستويات متقدمة في البنية التحتية وحماية النظم.
