@@ -120,8 +120,7 @@ export default function RawaaAnimatedLogo({
             <img
               src="/brand/rawaa_exact_logo_clean.png"
               alt="شعار رواء"
-              className="w-56 sm:w-64 md:w-72 h-auto object-contain drop-shadow-[0_12px_28px_rgba(2,132,199,0.32)] filter contrast-[1.04]"
-              priority-img="true"
+              className="w-60 sm:w-68 md:w-80 h-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] drop-shadow-[0_12px_32px_rgba(2,132,199,0.30)] filter contrast-[1.05]"
             />
           </div>
 
