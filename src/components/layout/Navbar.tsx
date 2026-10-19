@@ -4,15 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
-  Shield, 
   Menu, 
   X, 
-  Sparkles, 
   ArrowLeft,
-  LayoutDashboard,
   BookOpen
 } from 'lucide-react';
-import { dataStore } from '@/lib/store';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -30,27 +26,27 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path || (path !== '/' && pathname.startsWith(path));
 
   return (
-    <header className="sticky top-0 z-50 bg-[#08213C]/90 backdrop-blur-md border-b border-sky-400/20 shadow-lg shadow-sky-950/40">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 group-hover:scale-105 transition-all duration-300 flex items-center justify-center">
+            <div className="relative w-11 h-11 flex items-center justify-center">
               <img
                 src="/logo.png"
                 alt="رواء"
-                className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(56,189,248,0.7)]"
+                className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(2,132,199,0.25)] group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="text-2xl font-black tracking-tight text-white group-hover:text-sky-300 transition-colors">
+                <span className="text-2xl font-black tracking-tight text-slate-900 group-hover:text-sky-600 transition-colors">
                   رِوَاء
                 </span>
-                <span className="w-2 h-2 rounded-full bg-sky-400 inline-block animate-pulse shadow-glow"></span>
+                <span className="w-2 h-2 rounded-full bg-sky-500 inline-block animate-pulse shadow-sm"></span>
               </div>
-              <span className="text-[10px] font-mono tracking-[0.25em] text-sky-300 uppercase -mt-1 font-extrabold">
+              <span className="text-[10px] font-mono tracking-[0.25em] text-sky-600 uppercase -mt-1 font-extrabold">
                 RAWAA ACADEMY
               </span>
             </div>
@@ -64,8 +60,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3.5 py-2 rounded-xl text-xs lg:text-sm font-semibold transition-all ${
                   isActive(link.href)
-                    ? 'bg-sky-500/20 text-sky-300 border border-sky-400/30 shadow-glow'
-                    : 'text-sky-100/80 hover:text-white hover:bg-white/5'
+                    ? 'bg-sky-50 text-sky-700 border border-sky-200/80 shadow-sm font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
                 }`}
               >
                 {link.label}
@@ -77,7 +73,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/courses"
-              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-black font-extrabold text-xs shadow-glow hover:scale-105 transition-all flex items-center gap-2"
+              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-extrabold text-xs shadow-md shadow-sky-500/20 hover:scale-105 transition-all flex items-center gap-2"
             >
               <BookOpen className="w-4 h-4" />
               <span>ابدأ التعلّم الآن مجاناً</span>
@@ -89,13 +85,13 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <Link
               href="/courses"
-              className="px-3 py-1.5 rounded-xl bg-sky-400 text-black font-bold text-xs"
+              className="px-3 py-1.5 rounded-xl bg-sky-500 text-white font-bold text-xs"
             >
               ابدأ الآن
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl bg-white/5 text-gray-200 hover:text-white"
+              className="p-2 rounded-xl bg-slate-100 text-slate-700 hover:text-slate-900"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -106,7 +102,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0A2544] border-b border-sky-400/20 px-4 pt-3 pb-6 space-y-3">
+        <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-lg">
           <div className="flex flex-col space-y-1">
             {navLinks.map(link => (
               <Link
@@ -115,8 +111,8 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
                   isActive(link.href)
-                    ? 'bg-sky-500/20 text-sky-300 font-bold border border-sky-400/30'
-                    : 'text-sky-100/90 hover:text-white'
+                    ? 'bg-sky-50 text-sky-700 font-bold border border-sky-200'
+                    : 'text-slate-700 hover:bg-slate-50'
                 }`}
               >
                 {link.label}
@@ -124,11 +120,11 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="pt-3 border-t border-sky-400/20">
+          <div className="pt-3 border-t border-slate-200">
             <Link
               href="/courses"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3 text-center rounded-xl bg-sky-400 text-sm text-black font-extrabold flex items-center justify-center gap-2 shadow-glow"
+              className="w-full py-3 text-center rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 text-sm text-white font-extrabold flex items-center justify-center gap-2 shadow-md shadow-sky-500/20"
             >
               <BookOpen className="w-4 h-4" />
               استكشف الدورات وتعلّم فوراً

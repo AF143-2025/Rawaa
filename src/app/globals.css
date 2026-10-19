@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #08213C;
-  --foreground: #F0F9FF;
+  --background: #FFFFFF;
+  --foreground: #0F172A;
 }
 
 * {
@@ -15,57 +15,57 @@
 
 body {
   color: var(--foreground);
-  background: radial-gradient(ellipse at 50% 0%, #0E3864 0%, #08233F 45%, #05192E 100%) fixed;
+  background: #FFFFFF;
   font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
 }
 
-/* Custom Sky Blue Cyber Scrollbar */
+/* Custom Clean Scrollbar for White Background */
 ::-webkit-scrollbar {
   width: 9px;
   height: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #06192B;
+  background: #F8FAFC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #194670;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
+  background: #0284C7;
 }
 
-/* Cyber Grid Background Utility with Sky Tint */
+/* Cyber Grid Background Utility for White Canvas */
 .cyber-grid {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(14, 165, 233, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.07) 1px, transparent 1px);
 }
 
 .cyber-grid-cyan {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(14, 165, 233, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.12) 1px, transparent 1px);
 }
 
-/* Sky Blue Radial Glow Orbs */
+/* Subtle Soft Radial Glow Orbs on White */
 .glow-orb-cyan {
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(56, 189, 248, 0) 70%);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0) 70%);
 }
 
 .glow-orb-green {
-  background: radial-gradient(circle, rgba(52, 211, 153, 0.18) 0%, rgba(52, 211, 153, 0) 70%);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.10) 0%, rgba(16, 185, 129, 0) 70%);
 }
 
 .glow-orb-purple {
-  background: radial-gradient(circle, rgba(129, 140, 248, 0.18) 0%, rgba(129, 140, 248, 0) 70%);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(99, 102, 241, 0) 70%);
 }
 
 /* Terminal & Code font */
@@ -75,20 +75,35 @@ body {
   text-align: left;
 }
 
-/* Glassmorphism with Sky Blue Tint */
+/* Glassmorphism for Light Mode */
 .glass-panel {
-  background: rgba(12, 43, 76, 0.75);
+  background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(56, 189, 248, 0.18);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
 }
 
 .glass-panel-glow {
-  background: rgba(14, 49, 86, 0.85);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  box-shadow: 0 0 25px -4px rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.12);
+}
+
+/* Clean, Dignified Vertical Float for Logo (Zero Overlap / No Tilt) */
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-logo-float {
+  animation: logo-float 4s ease-in-out infinite;
 }
 
 /* Scanline Effect for Cyber Terminal */
