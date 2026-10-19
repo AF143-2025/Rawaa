@@ -36,11 +36,11 @@ export default function Navbar() {
           
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-xl p-0.5 bg-gradient-to-tr from-sky-400 to-cyan-300 shadow-glow group-hover:scale-105 transition-all duration-300 flex items-center justify-center">
+            <div className="relative w-11 h-11 group-hover:scale-105 transition-all duration-300 flex items-center justify-center">
               <img
                 src="/logo.png"
                 alt="رواء"
-                className="w-full h-full object-contain rounded-lg"
+                className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(56,189,248,0.7)]"
               />
             </div>
             <div className="flex flex-col">

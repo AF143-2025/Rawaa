@@ -73,20 +73,19 @@ export default function HomePage() {
               <span className="font-semibold tracking-wide">المنصة التفاعلية الأولى للتقنيات والأنظمة الدفاعية</span>
             </div>
 
-            {/* Magnificent Official Brand Logo Showcase */}
-            <div className="relative group select-none py-4">
-              {/* Luminous Ambient Glow behind the logo */}
-              <div className="absolute -inset-10 bg-gradient-to-r from-sky-400/30 via-cyan-400/20 to-emerald-400/30 rounded-full blur-3xl opacity-85 pointer-events-none animate-pulse" />
+            {/* Transparent Floating Brand Logo */}
+            <div className="relative select-none py-2 flex flex-col items-center">
+              {/* Soft ambient light aura behind transparent logo */}
+              <div className="absolute -inset-8 bg-gradient-to-r from-sky-400/25 via-cyan-400/15 to-emerald-400/25 rounded-full blur-3xl opacity-75 pointer-events-none animate-pulse" />
 
-              <div className="relative flex flex-col items-center">
-                {/* Official Logo Image from User */}
-                <div className="relative p-3 rounded-3xl bg-[#07192C]/80 border border-sky-400/30 shadow-2xl shadow-sky-500/30 backdrop-blur-md transform hover:scale-105 transition-all duration-300">
-                  <img
-                    src="/logo.png"
-                    alt="رواء | RAWAA Academy"
-                    className="w-56 sm:w-72 md:w-80 h-auto object-contain drop-shadow-[0_0_35px_rgba(56,189,248,0.55)] rounded-2xl"
-                  />
-                </div>
+              {/* Pure Transparent Logo without any box or background */}
+              <div className="relative transform hover:scale-105 transition-transform duration-300">
+                <img
+                  src="/logo.png"
+                  alt="رواء | RAWAA Academy"
+                  className="w-64 sm:w-80 md:w-96 h-auto object-contain drop-shadow-[0_0_40px_rgba(56,189,248,0.6)]"
+                />
+              </div>
 
                 {/* Subtitle Badge */}
                 <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-950/60 border border-sky-400/30 text-xs font-mono text-sky-200">
