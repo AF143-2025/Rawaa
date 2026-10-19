@@ -73,40 +73,26 @@ export default function HomePage() {
               <span className="font-semibold tracking-wide">المنصة التفاعلية الأولى للتقنيات والأنظمة الدفاعية</span>
             </div>
 
-            {/* Magnificent Brand Logo & Typography */}
-            <div className="relative group select-none py-2">
-              {/* Ambient Glow behind the logo */}
-              <div className="absolute -inset-6 bg-gradient-to-r from-cyan-500/25 via-sky-500/15 to-emerald-500/25 rounded-full blur-3xl opacity-80 pointer-events-none" />
+            {/* Magnificent Official Brand Logo Showcase */}
+            <div className="relative group select-none py-4">
+              {/* Luminous Ambient Glow behind the logo */}
+              <div className="absolute -inset-10 bg-gradient-to-r from-sky-400/30 via-cyan-400/20 to-emerald-400/30 rounded-full blur-3xl opacity-85 pointer-events-none animate-pulse" />
 
               <div className="relative flex flex-col items-center">
-                {/* Icon Shield Crest */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-tr from-cyan-500 via-sky-400 to-emerald-400 p-0.5 shadow-2xl shadow-cyan-500/40 mb-3 transform hover:scale-105 transition-transform duration-300">
-                  <div className="w-full h-full bg-[#070B12] rounded-[22px] flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/15 to-transparent pointer-events-none" />
-                    <Shield className="w-10 h-10 sm:w-12 sm:h-12 text-cyan-400 drop-shadow-[0_0_20px_rgba(6,182,212,0.9)]" />
-                  </div>
+                {/* Official Logo Image from User */}
+                <div className="relative p-3 rounded-3xl bg-[#07192C]/80 border border-sky-400/30 shadow-2xl shadow-sky-500/30 backdrop-blur-md transform hover:scale-105 transition-all duration-300">
+                  <img
+                    src="/logo.png"
+                    alt="رواء | RAWAA Academy"
+                    className="w-56 sm:w-72 md:w-80 h-auto object-contain drop-shadow-[0_0_35px_rgba(56,189,248,0.55)] rounded-2xl"
+                  />
                 </div>
 
-                {/* Main Arabic Name: رِوَاء */}
-                <div className="flex items-center justify-center">
-                  <span className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-cyan-100 to-cyan-400 drop-shadow-[0_4px_35px_rgba(6,182,212,0.45)] font-sans">
-                    رِوَاء
-                  </span>
+                {/* Subtitle Badge */}
+                <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-950/60 border border-sky-400/30 text-xs font-mono text-sky-200">
+                  <span className="w-2 h-2 rounded-full bg-sky-400 animate-ping" />
+                  <span>الأكاديمية العربية المتخصصة في هندسة الشبكات ولينكس والأمن السيبراني</span>
                 </div>
-
-                {/* English Branding with Cyber Line Dividers */}
-                <div className="flex items-center gap-3 mt-1">
-                  <div className="w-10 sm:w-20 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-cyan-400" />
-                  <span className="text-sm sm:text-base font-mono tracking-[0.35em] uppercase text-cyan-300 font-extrabold">
-                    RAWAA ACADEMY
-                  </span>
-                  <div className="w-10 sm:w-20 h-px bg-gradient-to-l from-transparent via-cyan-400/60 to-cyan-400" />
-                </div>
-
-                {/* Brand Category Tagline */}
-                <span className="text-xs sm:text-sm font-semibold text-gray-400 tracking-wider mt-2 font-sans">
-                  أكاديمية التدريب التقني وهندسة الأنظمة والدفاع السيبراني
-                </span>
               </div>
             </div>
           </div>

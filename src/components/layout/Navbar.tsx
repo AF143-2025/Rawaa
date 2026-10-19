@@ -35,19 +35,20 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-400 via-cyan-400 to-emerald-400 p-0.5 shadow-glow group-hover:scale-105 transition-all duration-300">
-              <div className="w-full h-full bg-[#08213C] rounded-[14px] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-sky-400/20 to-transparent pointer-events-none" />
-                <Shield className="w-6 h-6 text-sky-400 drop-shadow-[0_0_12px_rgba(56,189,248,0.85)]" />
-              </div>
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 rounded-xl p-0.5 bg-gradient-to-tr from-sky-400 to-cyan-300 shadow-glow group-hover:scale-105 transition-all duration-300 flex items-center justify-center">
+              <img
+                src="/logo.png"
+                alt="رواء"
+                className="w-full h-full object-contain rounded-lg"
+              />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="text-2xl sm:text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-100 to-sky-300">
+                <span className="text-2xl font-black tracking-tight text-white group-hover:text-sky-300 transition-colors">
                   رِوَاء
                 </span>
-                <span className="w-2.5 h-2.5 rounded-full bg-sky-400 inline-block animate-pulse shadow-glow"></span>
+                <span className="w-2 h-2 rounded-full bg-sky-400 inline-block animate-pulse shadow-glow"></span>
               </div>
               <span className="text-[10px] font-mono tracking-[0.25em] text-sky-300 uppercase -mt-1 font-extrabold">
                 RAWAA ACADEMY

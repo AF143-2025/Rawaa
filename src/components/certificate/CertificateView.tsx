@@ -47,8 +47,8 @@ export default function CertificateView({ certificate, allowPrint = true }: Cert
         {/* Header Branding */}
         <div className="relative z-10 flex flex-col items-center justify-center space-y-2 mb-8">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20 mb-2">
-            <div className="w-full h-full bg-[#080D18] rounded-[14px] flex items-center justify-center">
-              <Award className="w-8 h-8 text-amber-400" />
+            <div className="w-full h-full bg-[#080D18] rounded-[14px] flex items-center justify-center p-1.5 overflow-hidden">
+              <img src="/logo.png" alt="RAWAA Seal" className="w-full h-full object-contain" />
             </div>
           </div>
           <span className="text-sm tracking-widest uppercase text-amber-400 font-mono font-semibold">

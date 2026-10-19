@@ -11,14 +11,16 @@ export default function Footer() {
           {/* Brand Col (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-sky-400 to-emerald-400 p-0.5">
-                <div className="w-full h-full bg-[#080D18] rounded-[10px] flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-cyan-400" />
-                </div>
+              <div className="w-11 h-11 rounded-xl p-0.5 bg-gradient-to-tr from-sky-400 to-cyan-300 flex items-center justify-center shadow-glow">
+                <img
+                  src="/logo.png"
+                  alt="رواء"
+                  className="w-full h-full object-contain rounded-lg"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold text-white">رِواء</span>
-                <span className="text-[10px] font-mono tracking-widest text-cyan-400 uppercase -mt-1 font-bold">
+                <span className="text-[10px] font-mono tracking-widest text-sky-400 uppercase -mt-1 font-bold">
                   RAWAA ACADEMY
                 </span>
               </div>
