@@ -21,26 +21,26 @@ export default function RawaaAnimatedLogo({
     return (
       <div className={`relative inline-flex items-center justify-center ${className}`}>
         <img
-          src="/brand/rawaa_exact_emblem_only.png"
+          src="/brand/rawaa_navbar_logo_black_edge.png"
           alt="رواء"
-          className="w-full h-full object-contain drop-shadow-[0_4px_16px_rgba(2,132,199,0.3)] filter contrast-105"
+          className="w-full h-full object-contain drop-shadow-[0_4px_16px_rgba(2,132,199,0.3)] filter contrast-[1.05]"
         />
       </div>
     );
   }
 
   /* ================================================================
-     NAVBAR VARIANT – standalone prominent logo (no text beside it)
+     NAVBAR VARIANT – standalone prominent logo with bold black edges
      ================================================================ */
   if (variant === 'navbar') {
     return (
       <div className={`relative flex items-center justify-center select-none ${className}`}>
-        {/* Prominent Exact Isolated Logo */}
+        {/* Prominent Exact Isolated Logo with Bold Black Outlines */}
         <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
           <img
-            src="/brand/rawaa_exact_emblem_only.png"
+            src="/brand/rawaa_navbar_logo_black_edge.png"
             alt="شعار رواء"
-            className="w-full h-full object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.18)] drop-shadow-[0_4px_16px_rgba(2,132,199,0.35)] filter contrast-[1.05]"
+            className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.22)] drop-shadow-[0_4px_16px_rgba(2,132,199,0.30)] filter contrast-[1.06]"
           />
           {/* Subtle orbiting cyber node */}
           <div className="absolute inset-[-5px] animate-spin-slow pointer-events-none">
