@@ -58,13 +58,13 @@ export default function RawaaAnimatedLogo({
     <div className={`relative flex flex-col items-center justify-center select-none ${className}`}>
 
       {/* Soft Ambient Light Glow behind the logo */}
-      <div className="absolute w-60 sm:w-72 md:w-80 h-60 sm:h-72 md:h-80 rounded-full bg-gradient-to-tr from-sky-200/40 via-cyan-100/40 to-teal-100/30 blur-3xl pointer-events-none" />
+      <div className="absolute w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 rounded-full bg-gradient-to-tr from-sky-200/40 via-cyan-100/40 to-teal-100/30 blur-3xl pointer-events-none" />
 
       {/* Main Animated Assembly (Gentle Levitation) */}
       <div className="relative z-10 animate-logo-float flex flex-col items-center">
 
-        {/* Orbiting Circles Container (Scaled down for optimal proportion) */}
-        <div className="relative w-64 sm:w-72 md:w-80 aspect-square flex items-center justify-center">
+        {/* Orbiting Circles Container */}
+        <div className="relative w-72 sm:w-80 md:w-96 aspect-square flex items-center justify-center">
 
           {/* ============ ORBIT RING 1 (outermost, slow clockwise) ============ */}
           <div className="absolute inset-0 animate-orbit-1 pointer-events-none">
@@ -107,7 +107,7 @@ export default function RawaaAnimatedLogo({
             <img
               src="/brand/rawaa_exact_logo_clean.png"
               alt="شعار رواء"
-              className="w-44 sm:w-52 md:w-60 h-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] drop-shadow-[0_10px_28px_rgba(2,132,199,0.30)] filter contrast-[1.05]"
+              className="w-52 sm:w-60 md:w-72 h-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] drop-shadow-[0_12px_32px_rgba(2,132,199,0.30)] filter contrast-[1.05]"
             />
           </div>
 
