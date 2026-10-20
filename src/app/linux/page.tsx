@@ -15,7 +15,7 @@ export default function LinuxPage() {
       <div className="flex items-center gap-2 text-xs text-slate-500">
         <Link href="/" className="hover:text-slate-900 transition-colors">الرئيسية</Link>
         <span>/</span>
-        <span className="text-emerald-600 font-bold">إدارة أنظمة وسيرفرات Linux</span>
+        <span className="text-emerald-600 font-bold">دليل إدارة أنظمة وسيرفرات Linux الشامل 🐧🛡️</span>
       </div>
 
       <LinuxSection />
