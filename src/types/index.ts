@@ -11,7 +11,7 @@ export interface UserProfile {
   created_at: string;
 }
 
-export type TrackSlug = 'networks' | 'linux' | 'cybersecurity' | 'labs';
+export type TrackSlug = 'foundations' | 'networks' | 'linux' | 'cybersecurity' | 'programming' | 'labs';
 
 export interface LearningPath {
   id: string;
@@ -33,7 +33,7 @@ export interface Course {
   path_slug: TrackSlug;
   title: string;
   description: string;
-  level: 'مبتدئ' | 'متوسط' | 'متقدم';
+  level: 'مبتدئ' | 'متوسط' | 'متقدم' | 'مبتدئ إلى متوسط';
   duration_hours: number;
   prerequisites: string[];
   learning_objectives: string[];
