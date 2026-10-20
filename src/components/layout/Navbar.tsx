@@ -168,9 +168,9 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 lg:px-8 pointer-events-none transition-all duration-300">
+      <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-900/5 pointer-events-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           
           {/* Logo & Brand */}
           <Link href="/#hero" className="group focus:outline-none flex items-center">
@@ -313,7 +313,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu – Shows ALL Sections Clearly */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-8 space-y-4 shadow-xl max-h-[85vh] overflow-y-auto">
+        <div className="md:hidden bg-white/98 backdrop-blur-xl border border-slate-200 mt-2 rounded-2xl px-4 pt-3 pb-8 space-y-4 shadow-2xl max-h-[80vh] overflow-y-auto pointer-events-auto">
           
           <div className="flex items-center justify-between pb-2 border-b border-slate-100">
             <span className="text-xs font-bold text-slate-800">كل أقسام المنصة</span>
