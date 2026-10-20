@@ -12,13 +12,11 @@ import {
   Shield,
   Network,
   Award,
-  HelpCircle,
   Sparkles,
   ChevronDown,
   Layers,
   BarChart3,
-  Cpu,
-  CheckCircle2
+  Cpu
 } from 'lucide-react';
 import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
@@ -94,22 +92,6 @@ export default function Navbar() {
           bg: 'bg-cyan-50'
         },
         {
-          id: 'methodology',
-          title: 'طريقة التعلم (المنهجية)',
-          desc: 'منهجية رباعية الخطوات من التأسيس حتى الاعتماد',
-          icon: Layers,
-          color: 'text-blue-600',
-          bg: 'bg-blue-50'
-        },
-        {
-          id: 'faq',
-          title: 'الأسئلة الشائعة',
-          desc: 'إجابات مباشرة ومفصلة عن المنصة وطريقة الاستخدام',
-          icon: HelpCircle,
-          color: 'text-amber-600',
-          bg: 'bg-amber-50'
-        },
-        {
           id: 'stats',
           title: 'الإحصائيات الحية',
           desc: 'أعداد المسارات والدورات والتحديات النشطة',
@@ -148,10 +130,10 @@ export default function Navbar() {
   const primaryLinks = [
     { label: 'الرئيسية', id: 'hero', href: '/#hero' },
     { label: 'المسارات', id: 'tracks', href: '/#tracks' },
-    { label: 'الدورات', id: 'courses', href: '/#courses' },
+    { label: 'الدورات', id: 'courses', href: '/courses' },
     { label: 'المختبرات', id: 'labs', href: '/#labs' },
-    { label: 'التحديات', id: 'challenges', href: '/#challenges' },
-    { label: 'الأسئلة الشائعة', id: 'faq', href: '/#faq' },
+    { label: 'التحديات', id: 'challenges', href: '/labs?tab=ctf' },
+    { label: 'لماذا رواء؟', id: 'features', href: '/#features' },
   ];
 
   // Close mega menu on click outside
