@@ -17,6 +17,7 @@ import { INITIAL_TRACKS } from '@/lib/mockData';
 import { dataStore } from '@/lib/store';
 import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 import HelloKittyBackgroundAnimation from '@/components/brand/HelloKittyBackgroundAnimation';
+import HelloKittyScrollCompanion from '@/components/brand/HelloKittyScrollCompanion';
 
 export default function HomePage() {
   const stats = dataStore.getPlatformStats();
@@ -25,6 +26,9 @@ export default function HomePage() {
     <div className="relative space-y-24 pb-20 cyber-grid bg-white min-h-screen overflow-hidden">
       {/* Hello Kitty Animated Ambient Background */}
       <HelloKittyBackgroundAnimation />
+
+      {/* Hello Kitty Interactive Scroll Companion */}
+      <HelloKittyScrollCompanion />
       
       {/* 1. HERO SECTION */}
       <section id="hero" className="relative pt-3 sm:pt-5 md:pt-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
@@ -33,33 +37,54 @@ export default function HomePage() {
         <div className="absolute top-11 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
 
         <div className="relative z-10 text-center space-y-3 max-w-4xl mx-auto">
-          {/* Hero Brand Identity Showcase with Fixed Hello Kitty Stickers on Left & Right */}
-          <div className="relative flex items-center justify-center">
+          {/* Hero Brand Identity Showcase: Expertly Arranged Symmetrical Framing */}
+          <div className="relative flex items-center justify-center py-2">
 
-            {/* Left Hello Kitty Sticker (Fixed / Stable) */}
-            <div className="absolute -left-2 sm:left-4 md:left-8 lg:left-14 top-1/2 -translate-y-1/2 z-20 pointer-events-auto">
-              <div className="relative group hover:scale-105 transition-transform duration-300">
+            {/* Left Hello Kitty Sticker – Symmetrically Balanced Framing */}
+            <div className="absolute left-0 sm:left-4 md:left-8 lg:left-14 bottom-6 sm:bottom-10 md:bottom-12 z-20 pointer-events-auto">
+              <div 
+                className="relative group cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1.5 flex flex-col items-center"
+                title="حامية رواء اللطيفة 🎀"
+              >
+                {/* Soft glow halo */}
+                <div className="absolute inset-0 bg-pink-400/20 rounded-full blur-xl -z-10 group-hover:bg-pink-400/40 transition-colors" />
+
+                {/* Hello Kitty Graphic */}
                 <img
                   src="/brand/hello_kitty_right.png"
                   alt="ستيكر هيلو كيتي يسار"
-                  className="w-16 sm:w-20 md:w-24 h-auto object-contain drop-shadow-[0_4px_12px_rgba(244,114,182,0.30)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)]"
+                  className="w-18 sm:w-22 md:w-26 h-auto object-contain drop-shadow-[0_4px_16px_rgba(244,114,182,0.35)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)]"
                 />
+
+                {/* Grounding Contact Shadow for professional realism */}
+                <div className="w-12 sm:w-16 h-2 rounded-full bg-slate-900/10 blur-[3px] mt-1 group-hover:w-14 transition-all" />
               </div>
             </div>
 
             {/* Professional Vector Animated RAWAA Emblem */}
             <RawaaAnimatedLogo variant="hero" showSubtitle={false} />
 
-            {/* Right Hello Kitty Sticker (Fixed / Stable) */}
-            <div className="absolute -right-2 sm:right-4 md:right-8 lg:right-14 top-1/2 -translate-y-1/2 z-20 pointer-events-auto">
-              <div className="relative group hover:scale-105 transition-transform duration-300">
+            {/* Right Hello Kitty Sticker – Symmetrically Balanced Framing */}
+            <div className="absolute right-0 sm:right-4 md:right-8 lg:right-14 bottom-6 sm:bottom-10 md:bottom-12 z-20 pointer-events-auto">
+              <div 
+                className="relative group cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1.5 flex flex-col items-center"
+                title="حامية رواء اللطيفة 🛡️"
+              >
+                {/* Soft glow halo */}
+                <div className="absolute inset-0 bg-pink-400/20 rounded-full blur-xl -z-10 group-hover:bg-pink-400/40 transition-colors" />
+
+                {/* Hello Kitty Graphic */}
                 <img
                   src="/brand/hello_kitty_left.png"
                   alt="ستيكر هيلو كيتي يمين"
-                  className="w-16 sm:w-20 md:w-24 h-auto object-contain drop-shadow-[0_4px_12px_rgba(244,114,182,0.30)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)]"
+                  className="w-18 sm:w-22 md:w-26 h-auto object-contain drop-shadow-[0_4px_16px_rgba(244,114,182,0.35)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)]"
                 />
+
+                {/* Grounding Contact Shadow for professional realism */}
+                <div className="w-12 sm:w-16 h-2 rounded-full bg-slate-900/10 blur-[3px] mt-1 group-hover:w-14 transition-all" />
               </div>
             </div>
+
           </div>
 
           {/* Hero Slogan & Description */}
