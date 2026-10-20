@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { INITIAL_TRACKS } from '@/lib/mockData';
 import { dataStore } from '@/lib/store';
-import HelloKittyCarrierHero from '@/components/brand/HelloKittyCarrierHero';
+import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
 export default function HomePage() {
   const stats = dataStore.getPlatformStats();
@@ -30,9 +30,33 @@ export default function HomePage() {
         <div className="absolute top-11 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
 
         <div className="relative z-10 text-center space-y-3 max-w-4xl mx-auto">
-          {/* Hero Brand Identity Showcase: Hello Kitty Real Run & Logo Lift */}
+          {/* Hero Brand Identity Showcase with Fixed Hello Kitty Stickers on Left & Right */}
           <div className="relative flex items-center justify-center">
-            <HelloKittyCarrierHero showSubtitle={false} />
+
+            {/* Left Hello Kitty Sticker (Fixed / Stable) */}
+            <div className="absolute -left-2 sm:left-4 md:left-8 lg:left-14 top-1/2 -translate-y-1/2 z-20 pointer-events-auto">
+              <div className="relative group hover:scale-105 transition-transform duration-300">
+                <img
+                  src="/brand/hello_kitty_right.png"
+                  alt="ستيكر هيلو كيتي يسار"
+                  className="w-16 sm:w-20 md:w-24 h-auto object-contain drop-shadow-[0_4px_12px_rgba(244,114,182,0.30)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)]"
+                />
+              </div>
+            </div>
+
+            {/* Professional Vector Animated RAWAA Emblem */}
+            <RawaaAnimatedLogo variant="hero" showSubtitle={false} />
+
+            {/* Right Hello Kitty Sticker (Fixed / Stable) */}
+            <div className="absolute -right-2 sm:right-4 md:right-8 lg:right-14 top-1/2 -translate-y-1/2 z-20 pointer-events-auto">
+              <div className="relative group hover:scale-105 transition-transform duration-300">
+                <img
+                  src="/brand/hello_kitty_left.png"
+                  alt="ستيكر هيلو كيتي يمين"
+                  className="w-16 sm:w-20 md:w-24 h-auto object-contain drop-shadow-[0_4px_12px_rgba(244,114,182,0.30)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)]"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Hero Slogan & Description */}
