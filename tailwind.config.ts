@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#081E36",
-        foreground: "#F0F9FF",
+        background: "#FFFFFF",
+        foreground: "#0F172A",
         rawaa: {
           bg: "#081E36",           // Sky Navy / Deep Celestial Blue
           card: "#0C2E52",         // Rich Sky-Blue Card Surface
