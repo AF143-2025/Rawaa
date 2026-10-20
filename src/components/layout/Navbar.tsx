@@ -129,11 +129,10 @@ export default function Navbar() {
   // Quick direct navbar links
   const primaryLinks = [
     { label: 'الرئيسية', id: 'hero', href: '/#hero' },
-    { label: 'المسارات', id: 'tracks', href: '/#tracks' },
+    { label: 'نصائح هيلو كيتي 🎀', id: 'kitty-advice', href: '/#kitty-advice' },
+    { label: 'المسارات', id: 'tracks', href: '/tracks' },
     { label: 'الدورات', id: 'courses', href: '/courses' },
-    { label: 'المختبرات', id: 'labs', href: '/#labs' },
-    { label: 'التحديات', id: 'challenges', href: '/labs?tab=ctf' },
-    { label: 'لماذا رواء؟', id: 'features', href: '/#features' },
+    { label: 'المختبرات', id: 'labs', href: '/labs' },
   ];
 
   // Close mega menu on click outside

@@ -18,39 +18,23 @@ export default function HelloKittyScrollCompanion() {
   const [isMinimized, setIsMinimized] = useState<boolean>(false);
   const [isBubblePopping, setIsBubblePopping] = useState<boolean>(false);
 
-  // Motivational Messages that appear dynamically as the user scrolls through sections
+  // Motivational Messages that appear dynamically as the user scrolls
   const zones: ScrollMessage[] = [
     {
       id: 'hero',
       minScroll: 0,
-      maxScroll: 450,
+      maxScroll: 250,
       text: 'هيا نبدأ رواء! 🛡️✨',
       subtext: 'منصتج لتعلّم الأمن السيبراني 🎀',
       icon: '🛡️',
     },
     {
-      id: 'tracks',
-      minScroll: 450,
-      maxScroll: 1100,
-      text: 'تعلّمي وطوّري نفسج! 🌸💪',
-      subtext: 'اختاري مسارج التخصصي وانطلقي 🚀',
-      icon: '🌸',
-    },
-    {
-      id: 'labs',
-      minScroll: 1100,
-      maxScroll: 1800,
-      text: 'جاهزة للتطبيق العملي؟ 💻🎀',
-      subtext: 'طرفية لينكس ومحاكي الشبكات بانتظارج!',
-      icon: '💻',
-    },
-    {
-      id: 'features',
-      minScroll: 1800,
+      id: 'advice',
+      minScroll: 250,
       maxScroll: 99999,
-      text: 'مستقبلج التقني يبدأ من هنا! 🌟🚀',
-      subtext: 'أنتِ قادرة تبنين خبرة احترافية حقيقية ✨',
-      icon: '🌟',
+      text: 'تعلّمي وطوّري نفسج! 🌸💪',
+      subtext: 'اقرأي نصائح هيلو كيتي واستفيدي منها دائماً ✨',
+      icon: '🌸',
     },
   ];
 
