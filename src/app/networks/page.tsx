@@ -15,7 +15,7 @@ export default function NetworksPage() {
       <div className="flex items-center gap-2 text-xs text-slate-500">
         <Link href="/" className="hover:text-slate-900 transition-colors">الرئيسية</Link>
         <span>/</span>
-        <span className="text-cyan-600 font-bold">هندسة الشبكات والاتصالات</span>
+        <span className="text-cyan-600 font-bold">دليل هندسة الشبكات والاتصالات الشامل 🌐🛡️</span>
       </div>
 
       <NetworksSection />
