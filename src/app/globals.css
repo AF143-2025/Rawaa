@@ -470,3 +470,70 @@ body {
   animation: kitty-toss-effort-right 1.2s ease-in-out forwards;
 }
 
+/* ==========================================================================
+   HELLO KITTY FLOATING BACKGROUND ANIMATIONS
+   ========================================================================== */
+
+@keyframes float-drift-1 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-22px) translateX(14px) rotate(5deg);
+  }
+  66% {
+    transform: translateY(-10px) translateX(-12px) rotate(-4deg);
+  }
+}
+.animate-float-drift-1 {
+  animation: float-drift-1 14s ease-in-out infinite;
+}
+
+@keyframes float-drift-2 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-26px) translateX(-16px) rotate(-6deg);
+  }
+}
+.animate-float-drift-2 {
+  animation: float-drift-2 18s ease-in-out infinite;
+}
+
+@keyframes float-drift-3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) translateX(12px) rotate(4deg);
+  }
+}
+.animate-float-drift-3 {
+  animation: float-drift-3 16s ease-in-out infinite;
+}
+
+@keyframes float-spin-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(12deg);
+  }
+}
+.animate-float-spin-slow {
+  animation: float-spin-slow 10s ease-in-out infinite;
+}
+
+@keyframes float-spin-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(8deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-14deg);
+  }
+}
+.animate-float-spin-reverse {
+  animation: float-spin-reverse 12s ease-in-out infinite;
+}
+

@@ -16,12 +16,15 @@ import {
 import { INITIAL_TRACKS } from '@/lib/mockData';
 import { dataStore } from '@/lib/store';
 import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
+import HelloKittyBackgroundAnimation from '@/components/brand/HelloKittyBackgroundAnimation';
 
 export default function HomePage() {
   const stats = dataStore.getPlatformStats();
 
   return (
-    <div className="space-y-24 pb-20 cyber-grid bg-white min-h-screen">
+    <div className="relative space-y-24 pb-20 cyber-grid bg-white min-h-screen overflow-hidden">
+      {/* Hello Kitty Animated Ambient Background */}
+      <HelloKittyBackgroundAnimation />
       
       {/* 1. HERO SECTION */}
       <section id="hero" className="relative pt-3 sm:pt-5 md:pt-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
