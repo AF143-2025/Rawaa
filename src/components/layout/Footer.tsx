@@ -87,25 +87,25 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <Link href="/#foundations" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
+                <Link href="/foundations" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
                   <Shield className="w-3.5 h-3.5 text-sky-500 shrink-0" />
                   <span>الأساسات التقنية</span>
                 </Link>
               </li>
               <li>
-                <Link href="/#networks" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
+                <Link href="/networks" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
                   <Network className="w-3.5 h-3.5 text-cyan-500 shrink-0" />
                   <span>هندسة الشبكات</span>
                 </Link>
               </li>
               <li>
-                <Link href="/#linux" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
+                <Link href="/linux" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
                   <Terminal className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
                   <span>إدارة أنظمة Linux</span>
                 </Link>
               </li>
               <li>
-                <Link href="/#programming" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
+                <Link href="/programming" className="hover:text-sky-600 transition-colors flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                   <span>البرمجة والأتمتة</span>
                 </Link>

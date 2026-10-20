@@ -5,10 +5,6 @@ import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 import HelloKittyBackgroundAnimation from '@/components/brand/HelloKittyBackgroundAnimation';
 import HelloKittyScrollCompanion from '@/components/brand/HelloKittyScrollCompanion';
 import HelloKittyAdviceCorner from '@/components/brand/HelloKittyAdviceCorner';
-import FoundationsSection from '@/components/sections/FoundationsSection';
-import NetworksSection from '@/components/sections/NetworksSection';
-import LinuxSection from '@/components/sections/LinuxSection';
-import ProgrammingSection from '@/components/sections/ProgrammingSection';
 
 export default function HomePage() {
   return (
@@ -20,7 +16,7 @@ export default function HomePage() {
       <HelloKittyScrollCompanion />
       
       {/* Main Content Sections Flow */}
-      <div className="relative z-10 flex flex-col space-y-12 sm:space-y-16 pt-3 sm:pt-6 pb-8 sm:pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col space-y-10 sm:space-y-12 pt-3 sm:pt-6 pb-6 sm:pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 1. HERO SECTION: BRAND LOGO WITH HELLO KITTY FLANKING */}
         <section id="hero" className="relative w-full overflow-hidden scroll-mt-28">
@@ -107,18 +103,6 @@ export default function HomePage() {
         <section id="kitty-advice" className="relative w-full scroll-mt-28">
           <HelloKittyAdviceCorner />
         </section>
-
-        {/* 3. SECTION 1: FOUNDATIONS (الأساسات) */}
-        <FoundationsSection />
-
-        {/* 4. SECTION 2: NETWORKS (الشبكات) */}
-        <NetworksSection />
-
-        {/* 5. SECTION 3: LINUX (لينكس) */}
-        <LinuxSection />
-
-        {/* 6. SECTION 4: PROGRAMMING & AUTOMATION (البرمجة) */}
-        <ProgrammingSection />
 
       </div>
     </div>
