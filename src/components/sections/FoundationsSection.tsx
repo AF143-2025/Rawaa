@@ -126,7 +126,7 @@ export default function FoundationsSection() {
             
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-pink-700 text-xs font-black shadow-sm">
               <span className="w-2 h-2 rounded-full bg-pink-500 animate-ping" />
-              <span>دليل الأساسات والأمن السيبراني المرتل 🌸🛡️</span>
+              <span>دليل الأساسات والأمن السيبراني الشامل 🌸🛡️</span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-snug">
@@ -186,7 +186,7 @@ export default function FoundationsSection() {
         <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200/60 px-1">
           <span className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
             <BookOpen className="w-3.5 h-3.5 text-pink-500" />
-            <span>محطات الدليل التعليمي المرتل (انقري للانتقال لأي محطة):</span>
+            <span>محطات الدليل التعليمي المنظم (انقري للانتقال لأي محطة):</span>
           </span>
           <span className="text-[10px] font-mono font-bold text-slate-400">CYBER ROADMAP</span>
         </div>
@@ -288,7 +288,7 @@ export default function FoundationsSection() {
       </section>
 
       {/* =========================================================================
-          4. STATION 2: THE CIA TRIAD (المحطة الثانية: مثلث CIA المرتل)
+          4. STATION 2: THE CIA TRIAD (المحطة الثانية: مثلث CIA الذهبي)
           ========================================================================= */}
       <section id="station-2" className="scroll-mt-28 space-y-6">
         
@@ -446,7 +446,7 @@ export default function FoundationsSection() {
             className="w-10 h-10 object-contain shrink-0"
           />
           <div className="text-xs text-pink-900 font-bold leading-relaxed">
-            <span className="text-pink-600 font-black ml-1">🎀 هيلو كيتي ترتل القاعدة:</span>
+            <span className="text-pink-600 font-black ml-1">🎀 هيلو كيتي توضح القاعدة:</span>
             « يا رواء، مثلث الـ CIA هو بوصلتج الأساسية؛ أي هجوم سيبراني بالعالم هدفه يكسر وحدة من هالركائز الثلاثة: إما يسرق السرية، أو يخرب السلامة، أو يعطل التوافر! »
           </div>
         </div>
