@@ -11,7 +11,11 @@ interface ScrollMessage {
   icon: string;
 }
 
-export default function HelloKittyScrollCompanion() {
+interface HelloKittyScrollCompanionProps {
+  stickerSrc?: string;
+}
+
+export default function HelloKittyScrollCompanion({ stickerSrc = '/brand/hello_kitty_right.png' }: HelloKittyScrollCompanionProps) {
   const [currentZone, setCurrentZone] = useState<number>(0);
   const [clickCount, setClickCount] = useState<number>(0);
   const [hearts, setHearts] = useState<number[]>([]);
@@ -167,9 +171,9 @@ export default function HelloKittyScrollCompanion() {
             <div className="relative">
               <div className="absolute inset-0 bg-pink-400/25 rounded-full blur-md -z-10 group-hover:bg-pink-400/50 transition-colors" />
               <img
-                src="/brand/hello_kitty_right.png"
+                src={stickerSrc}
                 alt="هيلو كيتي رفيقة التعلّم"
-                className="w-14 sm:w-16 md:w-18 h-auto object-contain drop-shadow-[0_4px_10px_rgba(244,114,182,0.40)] animate-kitty-idle-left"
+                className="w-14 sm:w-16 md:w-18 h-auto object-contain drop-shadow-[0_4px_10px_rgba(244,114,182,0.40)] animate-kitty-idle-left rounded-xl"
               />
               <span className="absolute -top-1 -right-1 text-xs animate-pulse">
                 ✨

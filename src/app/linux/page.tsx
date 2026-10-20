@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react';
 export default function LinuxPage() {
   return (
     <div className="relative cyber-grid bg-white min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-8">
-      <HelloKittyScrollCompanion />
+      <HelloKittyScrollCompanion stickerSrc="/brand/kitty_linux.jpg" />
 
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-xs text-slate-500">

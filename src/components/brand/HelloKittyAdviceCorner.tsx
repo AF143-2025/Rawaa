@@ -38,8 +38,8 @@ export default function HelloKittyAdviceCorner() {
       tag: 'هندسة الشبكات 🌐',
       advice: 'يا رواء، ابدئي بفهم كيف تسافر حزم البيانات في الشبكة (TCP/IP)؛ لأن كل دفاع أمني ناجح يعتمد على فهم هذا المسار!',
       detail: 'الشبكات هي عصب العالم الرقمي؛ لما تفهمين الـ IP والـ Ports وكيف الأجهزة تتواصل، راح تفهمين أي ثغرة أو هجمة فوراً.',
-      poseImage: '/brand/hello_kitty_idea.png',
-      poseDescription: 'هيلو كيتي تحمل درع الحماية وتفكر بفكرة ذكية',
+      poseImage: '/brand/kitty_networks.jpg',
+      poseDescription: 'هيلو كيتي خبيرة الشبكات بكابل الإيثرنت وراوتر الواي فاي',
       icon: Network,
       color: 'text-sky-600',
       bg: 'bg-sky-50',
@@ -51,8 +51,8 @@ export default function HelloKittyAdviceCorner() {
       tag: 'إدارة Linux 🐧',
       advice: 'يا رواء، لا تخافين من شاشة Linux السوداء؛ كل أمر تطبقينه بإيدج يبني داخلج عقلية مهندسة حقيقية!',
       detail: 'الطرفية مو صعبة؛ هي مجرد لغة حوار مباشرة وسريعة مع الخادم. تدربي على أوامر التنقل والصلاحيات في المختبر وراح تعشقينها.',
-      poseImage: '/brand/hello_kitty_coding.png',
-      poseDescription: 'هيلو كيتي تبرمج على لابتوب وردي مع سماعات رأس',
+      poseImage: '/brand/kitty_linux.jpg',
+      poseDescription: 'هيلو كيتي وبطريق لينكس Tux وشاشة الأوامر',
       icon: Terminal,
       color: 'text-emerald-600',
       bg: 'bg-emerald-50',
@@ -64,8 +64,8 @@ export default function HelloKittyAdviceCorner() {
       tag: 'تطوير الذات 💖',
       advice: 'يا رواء، سر الاحتراف مو بدراسة 10 ساعات بيوم واحد؛ السر بنصف ساعة تطبيق عملي يومياً بدون انقطاع!',
       detail: 'التراكم اليومي هو السحر الحقيقي؛ درس واحد ومهمة معملية واحدة كل يوم تخليج بعد 3 أشهر سابقة أقرانج بمراحل.',
-      poseImage: '/brand/hello_kitty_lifting.png',
-      poseDescription: 'هيلو كيتي ترفع يديها للأعلى احتفالاً بالنجاح والقوة',
+      poseImage: '/brand/kitty_trophy.jpg',
+      poseDescription: 'هيلو كيتي ترفع كأس الإنجاز والتميز الأكاديمي',
       icon: Heart,
       color: 'text-pink-600',
       bg: 'bg-pink-50',
@@ -77,8 +77,8 @@ export default function HelloKittyAdviceCorner() {
       tag: 'الأمن السيبراني 🛡️',
       advice: 'يا رواء، النظري وحده يتبخر؛ دائماً افتحي مختبر رواء وجربي تحليل السجلات والبحث عن الثغرات بنفسج!',
       detail: 'الأمن السيبراني مهارة يد وعين، مثل قيادة الطائرة؛ التدريب على السجلات الحقيقية والأعلام هو اللي يخليج جاهزة لسوق العمل.',
-      poseImage: '/brand/hello_kitty_idea.png',
-      poseDescription: 'هيلو كيتي بدرع الأمان واستكشاف الثغرات',
+      poseImage: '/brand/kitty_foundations.jpg',
+      poseDescription: 'هيلو كيتي بدرع الحماية السيبراني الذهبي',
       icon: Shield,
       color: 'text-indigo-600',
       bg: 'bg-indigo-50',
@@ -86,12 +86,12 @@ export default function HelloKittyAdviceCorner() {
     },
     {
       id: 5,
-      category: 'نصيحة للثقة بالنفس',
-      tag: 'إلهام وطموح 🌟',
-      advice: 'يا رواء، ماكو شي مستحيل عليج؛ أكبر خبراء الأمن السيبراني بالعالم بدأوا من الصفر بنفس خطوتج هذه!',
+      category: 'نصيحة للثقة بالبرمجة والأتمتة',
+      tag: 'أتمتة بايثون وباش ⚡',
+      advice: 'يا رواء، ماكو شي مستحيل عليج؛ أتمتة مهامك بلغة بايثون وباش تختصر أيام عمل وتصنع منكِ مهندسة خارقة!',
       detail: 'الأخطاء أثناء التدريب هي أعظم معلم؛ كل ما تفشل مهمة وتكتشفين سببها، تعتبرين خطوتي خطوة عملاقة نحو الاحتراف.',
-      poseImage: '/brand/hello_kitty_right.png',
-      poseDescription: 'هيلو كيتي تقف بثقة وابتسامة مبهجة',
+      poseImage: '/brand/kitty_programming.jpg',
+      poseDescription: 'هيلو كيتي المبرمجة مع لابتوب وأفعى بايثون الذكية',
       icon: Sparkles,
       color: 'text-amber-600',
       bg: 'bg-amber-50',
@@ -181,7 +181,7 @@ export default function HelloKittyAdviceCorner() {
                   <img
                     src={current.poseImage}
                     alt={current.poseDescription}
-                    className="max-w-full max-h-full object-contain drop-shadow-[0_6px_18px_rgba(244,114,182,0.40)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform duration-300"
+                    className="max-w-full max-h-full object-contain rounded-2xl drop-shadow-[0_6px_18px_rgba(244,114,182,0.40)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
 

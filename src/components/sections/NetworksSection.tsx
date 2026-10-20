@@ -180,9 +180,9 @@ export default function NetworksSection() {
               
               <div className="relative w-40 sm:w-48 h-40 sm:h-48 flex items-center justify-center p-2">
                 <img
-                  src="/brand/hello_kitty_idea.png"
-                  alt="هيلو كيتي بدرع الشبكة"
-                  className="max-w-full max-h-full object-contain drop-shadow-[0_8px_20px_rgba(6,182,212,0.40)] group-hover:scale-105 transition-transform duration-300"
+                  src="/brand/kitty_networks.jpg"
+                  alt="هيلو كيتي خبيرة الشبكات السحابية"
+                  className="max-w-full max-h-full object-contain drop-shadow-[0_8px_20px_rgba(6,182,212,0.40)] group-hover:scale-105 transition-transform duration-300 rounded-2xl"
                 />
               </div>
 
@@ -295,9 +295,9 @@ export default function NetworksSection() {
           {/* Hello Kitty Cute Commentary Note */}
           <div className="p-4 rounded-2xl bg-pink-50/70 border border-pink-200 flex items-start sm:items-center gap-3">
             <img
-              src="/brand/hello_kitty_right.png"
-              alt="هيلو كيتي"
-              className="w-8 h-8 object-contain shrink-0 mt-0.5 sm:mt-0"
+              src="/brand/kitty_networks.jpg"
+              alt="هيلو كيتي خبيرة الشبكات"
+              className="w-10 h-10 object-contain shrink-0 rounded-xl mt-0.5 sm:mt-0"
             />
             <div className="text-xs text-pink-900 font-bold leading-relaxed">
               <span className="text-pink-600 font-black block sm:inline sm:ml-1">💡 همسة هيلو كيتي الذكية:</span>
@@ -385,9 +385,9 @@ export default function NetworksSection() {
           {/* Hello Kitty Speech Bubble */}
           <div className="p-4 rounded-2xl bg-pink-50/70 border border-pink-200 flex items-center gap-3">
             <img
-              src="/brand/hello_kitty_coding.png"
-              alt="هيلو كيتي تبرمج"
-              className="w-10 h-10 object-contain shrink-0"
+              src="/brand/kitty_networks.jpg"
+              alt="هيلو كيتي والشبكات"
+              className="w-10 h-10 object-contain shrink-0 rounded-xl"
             />
             <div className="text-xs text-pink-900 font-bold leading-relaxed">
               <span className="text-pink-600 font-black ml-1">🎀 هيلو كيتي توضح القاعدة:</span>
@@ -818,9 +818,9 @@ export default function NetworksSection() {
         <div className="flex items-center gap-4 text-right">
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white border border-cyan-200 flex items-center justify-center p-1.5 shrink-0 shadow-sm">
             <img
-              src="/brand/hello_kitty_idea.png"
-              alt="هيلو كيتي بدرع الشبكة"
-              className="w-full h-full object-contain drop-shadow"
+              src="/brand/kitty_trophy.jpg"
+              alt="هيلو كيتي ترفع كأس التميز للشبكات"
+              className="w-full h-full object-contain drop-shadow rounded-xl"
             />
           </div>
           <div className="space-y-1">
