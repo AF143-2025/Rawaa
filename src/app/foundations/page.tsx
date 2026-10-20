@@ -15,7 +15,7 @@ export default function FoundationsPage() {
       <div className="flex items-center gap-2 text-xs text-slate-500">
         <Link href="/" className="hover:text-slate-900 transition-colors">الرئيسية</Link>
         <span>/</span>
-        <span className="text-sky-600 font-bold">الأساسات التقنية والأمنية</span>
+        <span className="text-pink-600 font-bold">دليل الأساسات والأمن السيبراني المرتل 🌸🛡️</span>
       </div>
 
       <FoundationsSection />
