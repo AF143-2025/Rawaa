@@ -20,13 +20,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-white border-t-2 border-slate-100 text-slate-600 text-xs mt-20 select-none overflow-hidden">
+    <footer className="relative bg-white border-t-2 border-slate-100 text-slate-600 text-xs mt-4 sm:mt-6 select-none overflow-hidden">
       
       {/* Decorative Subtle Ambient Glows */}
       <div className="absolute top-0 right-1/4 w-96 h-32 bg-sky-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-0 left-1/4 w-96 h-32 bg-pink-100/30 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 pb-8 sm:pb-10">
         
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-slate-100">

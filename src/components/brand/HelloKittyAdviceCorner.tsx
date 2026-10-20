@@ -116,7 +116,7 @@ export default function HelloKittyAdviceCorner() {
   const IconComponent = current.icon;
 
   return (
-    <div className="space-y-10 max-w-5xl mx-auto px-4 sm:px-6">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6">
       
       {/* =========================================================================
           MAIN FEATURED ADVICE CARD WITH DYNAMIC HELLO KITTY POSES
