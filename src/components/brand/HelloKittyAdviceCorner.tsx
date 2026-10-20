@@ -1,17 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { 
   Sparkles, 
   Terminal, 
-  BookOpen, 
   Network, 
   Shield, 
   Heart, 
   ArrowLeft,
-  RefreshCw,
-  CheckCircle2
+  RefreshCw
 } from 'lucide-react';
 
 interface AdviceItem {
@@ -308,36 +305,6 @@ export default function HelloKittyAdviceCorner() {
               </div>
             );
           })}
-        </div>
-      </div>
-
-      {/* =========================================================================
-          PRACTICE PATHWAY (APPLYING THE ADVICE)
-          ========================================================================= */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl text-center space-y-4">
-        <h3 className="text-base sm:text-lg font-black text-white flex items-center justify-center gap-2">
-          <span>جاهزة لتطبيق نصائح هيلو كيتي عملياً يا رواء؟</span>
-          <span>🛡️💻</span>
-        </h3>
-        <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-          جميع المختبرات المعزولة والدورات التخصصية جاهزة للتدريب الفوري مباشرة من متصفحك.
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-          <Link
-            href="/courses"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 font-extrabold text-xs shadow-md transition-all flex items-center gap-2"
-          >
-            <BookOpen className="w-4 h-4" />
-            استكشفي الدورات والدروس
-          </Link>
-
-          <Link
-            href="/labs"
-            className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white font-bold text-xs transition-all flex items-center gap-2"
-          >
-            <Terminal className="w-4 h-4 text-cyan-400" />
-            الدخول للمختبرات التفاعلية
-          </Link>
         </div>
       </div>
 
