@@ -3,36 +3,36 @@
 import React from 'react';
 
 export default function HelloKittyBackgroundAnimation() {
-  // Array of floating background elements with custom coordinates, sizes, delays and animations
+  // Array of floating background elements featuring Hello Kitty in multiple distinct poses!
   const floatingItems = [
-    // Top-left floating Kitty
+    // Top-left: Hello Kitty with Bright Idea & Cyber Shield
     {
       type: 'kitty',
-      src: '/brand/hello_kitty_right.png',
+      src: '/brand/hello_kitty_idea.png',
       className: 'top-[8%] left-[4%] w-14 sm:w-16 md:w-20 opacity-20 animate-float-drift-1',
     },
-    // Top-right floating Kitty
+    // Top-right: Hello Kitty Coding on Pink Laptop
     {
       type: 'kitty',
-      src: '/brand/hello_kitty_left.png',
+      src: '/brand/hello_kitty_coding.png',
       className: 'top-[12%] right-[5%] w-14 sm:w-16 md:w-20 opacity-20 animate-float-drift-2',
     },
-    // Mid-left Kitty
-    {
-      type: 'kitty',
-      src: '/brand/hello_kitty_right.png',
-      className: 'top-[42%] left-[2%] w-12 sm:w-16 opacity-15 animate-float-drift-3',
-    },
-    // Mid-right Kitty
-    {
-      type: 'kitty',
-      src: '/brand/hello_kitty_left.png',
-      className: 'top-[55%] right-[3%] w-12 sm:w-16 opacity-15 animate-float-drift-1',
-    },
-    // Lower floating Kitty
+    // Mid-left: Hello Kitty Triumphant Paws-Up
     {
       type: 'kitty',
       src: '/brand/hello_kitty_lifting.png',
+      className: 'top-[42%] left-[2%] w-12 sm:w-16 opacity-15 animate-float-drift-3',
+    },
+    // Mid-right: Hello Kitty Coding
+    {
+      type: 'kitty',
+      src: '/brand/hello_kitty_coding.png',
+      className: 'top-[55%] right-[3%] w-12 sm:w-16 opacity-15 animate-float-drift-1',
+    },
+    // Lower floating: Hello Kitty Standing Joyfully
+    {
+      type: 'kitty',
+      src: '/brand/hello_kitty_right.png',
       className: 'top-[80%] left-[8%] w-12 sm:w-14 opacity-15 animate-float-drift-2',
     },
     // Floating Iconic Hello Kitty Bows (🎀)

@@ -26,16 +26,16 @@ export default function HomePage() {
           {/* Brand Identity: Logo + Compact Hello Kitty on Left & Right */}
           <div className="relative inline-flex items-center justify-center mx-auto">
 
-            {/* Left Hello Kitty Sticker */}
+            {/* Left Hello Kitty Sticker: Teacher / Idea pose with Cyber Shield */}
             <div className="absolute -left-6 sm:-left-8 md:-left-12 top-[55%] -translate-y-1/2 z-20 pointer-events-auto">
               <div 
                 className="relative group cursor-pointer transition-all duration-300 hover:scale-110 hover:-translate-y-1 flex flex-col items-center"
-                title="حامية رواء اللطيفة 🎀"
+                title="هيلو كيتي تحمل درع الحماية 🛡️"
               >
                 <div className="absolute inset-0 bg-pink-400/25 rounded-full blur-lg -z-10 group-hover:bg-pink-400/50 transition-colors" />
                 <img
-                  src="/brand/hello_kitty_right.png"
-                  alt="ستيكر هيلو كيتي يسار"
+                  src="/brand/hello_kitty_idea.png"
+                  alt="هيلو كيتي بدرع الأمان"
                   className="w-12 sm:w-14 md:w-16 h-auto object-contain drop-shadow-[0_3px_10px_rgba(244,114,182,0.35)] drop-shadow-[0_1px_3px_rgba(0,0,0,0.15)]"
                 />
                 <div className="w-8 sm:w-10 h-1.5 rounded-full bg-slate-900/15 blur-[2px] mt-0.5 group-hover:w-9 transition-all" />
@@ -45,16 +45,16 @@ export default function HomePage() {
             {/* Professional Vector Animated RAWAA Emblem */}
             <RawaaAnimatedLogo variant="hero" showSubtitle={false} />
 
-            {/* Right Hello Kitty Sticker */}
+            {/* Right Hello Kitty Sticker: Triumphant Paws-Up Pose */}
             <div className="absolute -right-6 sm:-right-8 md:-right-12 top-[55%] -translate-y-1/2 z-20 pointer-events-auto">
               <div 
                 className="relative group cursor-pointer transition-all duration-300 hover:scale-110 hover:-translate-y-1 flex flex-col items-center"
-                title="حامية رواء اللطيفة 🛡️"
+                title="هيلو كيتي تحتفل بنجاح رواء 🎀"
               >
                 <div className="absolute inset-0 bg-pink-400/25 rounded-full blur-lg -z-10 group-hover:bg-pink-400/50 transition-colors" />
                 <img
-                  src="/brand/hello_kitty_left.png"
-                  alt="ستيكر هيلو كيتي يمين"
+                  src="/brand/hello_kitty_lifting.png"
+                  alt="هيلو كيتي ترفع يديها للأعلى"
                   className="w-12 sm:w-14 md:w-16 h-auto object-contain drop-shadow-[0_3px_10px_rgba(244,114,182,0.35)] drop-shadow-[0_1px_3px_rgba(0,0,0,0.15)]"
                 />
                 <div className="w-8 sm:w-10 h-1.5 rounded-full bg-slate-900/15 blur-[2px] mt-0.5 group-hover:w-9 transition-all" />
