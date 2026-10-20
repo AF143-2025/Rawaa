@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { INITIAL_TRACKS } from '@/lib/mockData';
 import { dataStore } from '@/lib/store';
-import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
+import HelloKittyCarrierHero from '@/components/brand/HelloKittyCarrierHero';
 
 export default function HomePage() {
   const stats = dataStore.getPlatformStats();
@@ -30,11 +30,9 @@ export default function HomePage() {
         <div className="absolute top-11 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
 
         <div className="relative z-10 text-center space-y-3 max-w-4xl mx-auto">
-          {/* Hero Brand Identity Showcase */}
-          <div className="flex flex-col items-center justify-center">
-
-            {/* Professional Vector Animated RAWAA Emblem */}
-            <RawaaAnimatedLogo variant="hero" showSubtitle={false} />
+          {/* Hero Brand Identity Showcase: Hello Kitty Real Run & Logo Lift */}
+          <div className="relative flex items-center justify-center">
+            <HelloKittyCarrierHero showSubtitle={false} />
           </div>
 
           {/* Hero Slogan & Description */}

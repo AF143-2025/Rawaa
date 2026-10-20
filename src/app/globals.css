@@ -175,3 +175,298 @@ body {
   animation: fade-in 0.4s ease-out both;
 }
 
+/* ===== HELLO KITTY RUNNING & IDLE ANIMATIONS ===== */
+
+/* Left Kitty: runs in from left towards the center logo */
+@keyframes kitty-run-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-180px) translateY(0) scale(0.85);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-130px) translateY(-14px) scale(0.9) rotate(-6deg);
+  }
+  40% {
+    transform: translateX(-80px) translateY(0) scale(0.95) rotate(4deg);
+  }
+  60% {
+    transform: translateX(-35px) translateY(-12px) scale(0.98) rotate(-5deg);
+  }
+  80% {
+    transform: translateX(-10px) translateY(0) scale(1.02) rotate(2deg);
+  }
+  92% {
+    transform: translateX(3px) translateY(-6px) scale(1) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+  }
+}
+.animate-kitty-run-in-left {
+  animation: kitty-run-in-left 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Right Kitty: runs in from right towards the center logo */
+@keyframes kitty-run-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(180px) translateY(0) scale(0.85);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(130px) translateY(-14px) scale(0.9) rotate(6deg);
+  }
+  40% {
+    transform: translateX(80px) translateY(0) scale(0.95) rotate(-4deg);
+  }
+  60% {
+    transform: translateX(35px) translateY(-12px) scale(0.98) rotate(5deg);
+  }
+  80% {
+    transform: translateX(10px) translateY(0) scale(1.02) rotate(-2deg);
+  }
+  92% {
+    transform: translateX(-3px) translateY(-6px) scale(1) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+  }
+}
+.animate-kitty-run-in-right {
+  animation: kitty-run-in-right 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Left Kitty Idle: cute breathing and gentle playful tilt */
+@keyframes kitty-idle-left {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-3deg);
+  }
+}
+.animate-kitty-idle-left {
+  animation: kitty-idle-left 3.2s ease-in-out infinite;
+}
+
+/* Right Kitty Idle: cute breathing and gentle playful tilt */
+@keyframes kitty-idle-right {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+.animate-kitty-idle-right {
+  animation: kitty-idle-right 3.2s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   HEURISTIC CHOREOGRAPHED LIFT & CARRY ANIMATIONS ("يشيل الشعار")
+   ========================================================================== */
+
+/* Realistic Stride Left: sprints from left, leans forward, footsteps bobbing, skids under shield */
+@keyframes kitty-run-in-realistic-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-280px) translateY(0) scale(0.85) rotate(14deg);
+  }
+  12% {
+    opacity: 1;
+    transform: translateX(-230px) translateY(-16px) scale(0.9) rotate(8deg);
+  }
+  24% {
+    transform: translateX(-180px) translateY(0) scale(0.92) rotate(14deg);
+  }
+  36% {
+    transform: translateX(-130px) translateY(-16px) scale(0.95) rotate(8deg);
+  }
+  48% {
+    transform: translateX(-90px) translateY(0) scale(0.98) rotate(14deg);
+  }
+  60% {
+    transform: translateX(-55px) translateY(-14px) scale(1) rotate(6deg);
+  }
+  75% {
+    transform: translateX(-25px) translateY(0) scale(1) rotate(10deg);
+  }
+  88% {
+    transform: translateX(6px) translateY(-8px) scale(1.02) rotate(-6deg); /* skid */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+  }
+}
+.animate-kitty-run-in-realistic-left {
+  animation: kitty-run-in-realistic-left 1.8s cubic-bezier(0.25, 1, 0.4, 1) forwards;
+}
+
+/* Realistic Stride Right: sprints from right, leans forward, footsteps bobbing, skids under shield */
+@keyframes kitty-run-in-realistic-right {
+  0% {
+    opacity: 0;
+    transform: translateX(280px) translateY(0) scale(0.85) rotate(-14deg);
+  }
+  12% {
+    opacity: 1;
+    transform: translateX(230px) translateY(-16px) scale(0.9) rotate(-8deg);
+  }
+  24% {
+    transform: translateX(180px) translateY(0) scale(0.92) rotate(-14deg);
+  }
+  36% {
+    transform: translateX(130px) translateY(-16px) scale(0.95) rotate(-8deg);
+  }
+  48% {
+    transform: translateX(90px) translateY(0) scale(0.98) rotate(-14deg);
+  }
+  60% {
+    transform: translateX(55px) translateY(-14px) scale(1) rotate(-6deg);
+  }
+  75% {
+    transform: translateX(25px) translateY(0) scale(1) rotate(-10deg);
+  }
+  88% {
+    transform: translateX(-6px) translateY(-8px) scale(1.02) rotate(6deg); /* skid */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+  }
+}
+.animate-kitty-run-in-realistic-right {
+  animation: kitty-run-in-realistic-right 1.8s cubic-bezier(0.25, 1, 0.4, 1) forwards;
+}
+
+/* Kitty Heave-Lift (Left): bends down in crouch, then pushes UP with all strength */
+@keyframes kitty-lift-left {
+  0% {
+    transform: translateY(10px) scale(0.95) rotate(0deg);
+  }
+  40% {
+    transform: translateY(14px) scale(0.92) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(-8px) scale(1.04) rotate(0deg);
+  }
+}
+.animate-kitty-lift-left {
+  animation: kitty-lift-left 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Kitty Heave-Lift (Right): bends down in crouch, then pushes UP with all strength */
+@keyframes kitty-lift-right {
+  0% {
+    transform: translateY(10px) scale(0.95) rotate(0deg);
+  }
+  40% {
+    transform: translateY(14px) scale(0.92) rotate(2deg);
+  }
+  100% {
+    transform: translateY(-8px) scale(1.04) rotate(0deg);
+  }
+}
+.animate-kitty-lift-right {
+  animation: kitty-lift-right 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Active Carry Rhythm (Left Kitty): marching in place supporting the shield overhead */
+@keyframes kitty-carry-idle-left {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+}
+.animate-kitty-carry-idle-left {
+  animation: kitty-carry-idle-left 2.4s ease-in-out infinite;
+}
+
+/* Active Carry Rhythm (Right Kitty): marching in place supporting the shield overhead */
+@keyframes kitty-carry-idle-right {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+.animate-kitty-carry-idle-right {
+  animation: kitty-carry-idle-right 2.4s ease-in-out infinite;
+}
+
+/* The Carried Logo: elevated aloft, bobbing gently in sync with Kitties' paws */
+@keyframes kitty-carried-logo {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+.animate-kitty-carried-logo {
+  animation: kitty-carried-logo 2.4s ease-in-out infinite;
+}
+
+/* Interactive Toss celebration */
+@keyframes kitty-toss-logo {
+  0% {
+    transform: translateY(-10px) scale(1);
+  }
+  35% {
+    transform: translateY(-46px) scale(1.04);
+  }
+  70% {
+    transform: translateY(-4px) scale(0.98);
+  }
+  100% {
+    transform: translateY(-10px) scale(1);
+  }
+}
+.animate-kitty-toss-logo {
+  animation: kitty-toss-logo 1.2s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
+}
+
+/* Kitty effort when tossing logo higher */
+@keyframes kitty-toss-effort-left {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    transform: translateY(-16px) scale(1.08) rotate(-4deg);
+  }
+  70% {
+    transform: translateY(4px) scale(0.96) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+.animate-kitty-toss-effort-left {
+  animation: kitty-toss-effort-left 1.2s ease-in-out forwards;
+}
+
+@keyframes kitty-toss-effort-right {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  35% {
+    transform: translateY(-16px) scale(1.08) rotate(4deg);
+  }
+  70% {
+    transform: translateY(4px) scale(0.96) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+.animate-kitty-toss-effort-right {
+  animation: kitty-toss-effort-right 1.2s ease-in-out forwards;
+}
+
