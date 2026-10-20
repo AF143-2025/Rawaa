@@ -40,7 +40,48 @@ export default function Navbar() {
   // All platform sections
   const platformSections: { category: string; items: SectionItem[] }[] = [
     {
-      category: 'الأقسام التعليمية والتدريبية',
+      category: 'الأقسام التخصصية الأربعة',
+      items: [
+        {
+          id: 'foundations',
+          title: 'الأساسات التقنية',
+          desc: 'معمارية الحاسوب، نظم التشغيل، مثلث CIA، والتشفير',
+          icon: Shield,
+          color: 'text-sky-600',
+          bg: 'bg-sky-50',
+          pageHref: '/#foundations'
+        },
+        {
+          id: 'networks',
+          title: 'هندسة الشبكات',
+          desc: 'نموذج OSI، بروتوكولات TCP/IP، وعنونة Subnetting',
+          icon: Network,
+          color: 'text-cyan-600',
+          bg: 'bg-cyan-50',
+          pageHref: '/#networks'
+        },
+        {
+          id: 'linux',
+          title: 'أنظمة وسيرفرات Linux',
+          desc: 'سطر الأوامر والطرفية، إدارة الصلاحيات، وتأمين السيرفرات',
+          icon: Terminal,
+          color: 'text-emerald-600',
+          bg: 'bg-emerald-50',
+          pageHref: '/#linux'
+        },
+        {
+          id: 'programming',
+          title: 'البرمجة والأتمتة',
+          desc: 'بايثون للأمن والشبكات، وسكربتات باش لأتمتة المهام',
+          icon: Cpu,
+          color: 'text-amber-600',
+          bg: 'bg-amber-50',
+          pageHref: '/#programming'
+        }
+      ]
+    },
+    {
+      category: 'الأدوات والمحتوى الأكاديمي',
       items: [
         {
           id: 'tracks',
@@ -126,13 +167,13 @@ export default function Navbar() {
     }
   ];
 
-  // Quick direct navbar links
+  // Quick direct navbar links as requested: الرئيسية، الأساسات، الشبكات، لينكس، البرمجة
   const primaryLinks = [
     { label: 'الرئيسية', id: 'hero', href: '/#hero' },
-    { label: 'نصائح هيلو كيتي 🎀', id: 'kitty-advice', href: '/#kitty-advice' },
-    { label: 'المسارات', id: 'tracks', href: '/tracks' },
-    { label: 'الدورات', id: 'courses', href: '/courses' },
-    { label: 'المختبرات', id: 'labs', href: '/labs' },
+    { label: 'الأساسات', id: 'foundations', href: '/#foundations' },
+    { label: 'الشبكات', id: 'networks', href: '/#networks' },
+    { label: 'لينكس', id: 'linux', href: '/#linux' },
+    { label: 'البرمجة', id: 'programming', href: '/#programming' },
   ];
 
   // Close mega menu on click outside
@@ -316,8 +357,21 @@ export default function Navbar() {
         <div className="md:hidden bg-white/98 backdrop-blur-xl border border-slate-200 mt-2 rounded-2xl px-4 pt-3 pb-8 space-y-4 shadow-2xl max-h-[80vh] overflow-y-auto pointer-events-auto">
           
           <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-            <span className="text-xs font-bold text-slate-800">كل أقسام المنصة</span>
-            <span className="text-[10px] text-sky-600 font-mono font-bold">RAWAA DIRECT NAVIGATION</span>
+            <span className="text-xs font-bold text-slate-800">أقسام المنصة الرئيسية</span>
+            <span className="text-[10px] text-sky-600 font-mono font-bold">RAWAA NAVIGATION</span>
+          </div>
+
+          {/* Primary Quick Links for Mobile (الرئيسية، الأساسات، الشبكات، لينكس، البرمجة) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pb-2">
+            {primaryLinks.map(link => (
+              <button
+                key={link.id}
+                onClick={() => handleScrollToSection(link.id, link.href)}
+                className="p-2.5 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 text-xs font-bold text-slate-800 text-center transition-colors cursor-pointer"
+              >
+                {link.label}
+              </button>
+            ))}
           </div>
 
           {/* All Sections for Mobile */}

@@ -11,6 +11,26 @@ import {
 
 export const INITIAL_TRACKS: LearningPath[] = [
   {
+    id: 'track-0',
+    slug: 'foundations',
+    title: 'الأساسات التقنية وأساسيات الحاسوب',
+    title_en: 'Computer & IT Foundations',
+    description: 'المفاهيم التأسيسية التي يبنى عليها كل علم تقني: معمارية الحاسوب، نظم التشغيل، كيف يعمل الإنترنت، ومفاهيم الحماية الرقمية الأولى.',
+    icon: 'Shield',
+    level: 'مبتدئ',
+    total_hours: 25,
+    color: '#0284C7',
+    order_num: 1,
+    topics: [
+      'معمارية الحاسوب ونظم التشغيل والذاكرة (RAM & CPU)',
+      'كيف يتصل الحاسوب بالإنترنت ومسار طلبات الويب (DNS, IP, HTTP)',
+      'مثلث أمن المعلومات (CIA Triad: السرية، السلامة، التوافر)',
+      'أساسيات التشفير (Cryptography) والتجزئة (Hashing)',
+      'أنواع التهديدات السيبرانية والهندسة الاجتماعية (Social Engineering)',
+      'إدارة كلمات المرور وتأمين الحسابات والمصادقة الثنائية 2FA'
+    ]
+  },
+  {
     id: 'track-1',
     slug: 'networks',
     title: 'هندسة الشبكات والاتصالات',
@@ -20,7 +40,7 @@ export const INITIAL_TRACKS: LearningPath[] = [
     level: 'شامل',
     total_hours: 45,
     color: '#06B6D4',
-    order_num: 1,
+    order_num: 2,
     topics: [
       'أساسيات الشبكات وطوبولوجيا الربط',
       'نموذج OSI السبع طبقات ونموذج TCP/IP',
@@ -42,7 +62,7 @@ export const INITIAL_TRACKS: LearningPath[] = [
     level: 'شامل',
     total_hours: 40,
     color: '#10B981',
-    order_num: 2,
+    order_num: 3,
     topics: [
       'مقدمة في نواة Linux وتوزيعاته (Debian, Ubuntu, RHEL)',
       'إتقان أوامر الطرفية والتنقل وإدارة الملفات والمجلدات',
@@ -55,6 +75,26 @@ export const INITIAL_TRACKS: LearningPath[] = [
     ]
   },
   {
+    id: 'track-5',
+    slug: 'programming',
+    title: 'البرمجة والأتمتة (Python & Bash)',
+    title_en: 'Cyber Programming & Automation',
+    description: 'تحويل المهام الروتينية إلى أدوات ذكية، كتابة سكربتات فحص الشبكات واستكشاف الثغرات وتطوير أدوات الحماية باستخدام Python و Bash.',
+    icon: 'Terminal',
+    level: 'شامل',
+    total_hours: 35,
+    color: '#F59E0B',
+    order_num: 4,
+    topics: [
+      'أساسيات لغة Python من الصفر حتى كتابة برامج متكاملة',
+      'التعامل مع الشبكات والمقابس (Sockets) وبروتوكول HTTP عبر Requests',
+      'بناء أدوات فحص المنافذ التلقائية (Port Scanners)',
+      'كتابة سكربتات باش (Bash Scripting) لأتمتة إدارة السيرفرات',
+      'معالجة النصوص وتحليل السجلات الأمنية عبر Regular Expressions (Regex)',
+      'أتمتة الفحص الأمني وجمع المعلومات الاستخباراتية مفتوحة المصدر (OSINT)'
+    ]
+  },
+  {
     id: 'track-3',
     slug: 'cybersecurity',
     title: 'الأمن السيبراني والدفاع الرقمي',
@@ -64,7 +104,7 @@ export const INITIAL_TRACKS: LearningPath[] = [
     level: 'شامل',
     total_hours: 55,
     color: '#8B5CF6',
-    order_num: 3,
+    order_num: 5,
     topics: [
       'مبادئ أمن المعلومات ومثلث السرية والسلامة والتوافر CIA Triad',
       'أساسيات التشفير المتناظر وغير المتناظر والتواقيع الرقمية',
@@ -86,7 +126,7 @@ export const INITIAL_TRACKS: LearningPath[] = [
     level: 'شامل',
     total_hours: 30,
     color: '#38BDF8',
-    order_num: 4,
+    order_num: 6,
     topics: [
       'مختبر الطرفية الافتراضي التفاعلي لأوامر Linux',
       'محاكي الشبكات وحاسبة Subnetting التفاعلية',
@@ -99,6 +139,48 @@ export const INITIAL_TRACKS: LearningPath[] = [
 ];
 
 export const INITIAL_COURSES: Course[] = [
+  {
+    id: 'course-foundations-101',
+    slug: 'it-foundations-essentials',
+    path_slug: 'foundations',
+    title: 'الأساسات الرقمية الشاملة لمهندسي المستقبل',
+    description: 'انطلاقة مثالية للمبتدئين لفهم كيف تعمل الحواسيب والإنترنت والتشفير، وبناء قاعدة معرفية صلبة للانتقال إلى الشبكات ولينكس والأمن.',
+    level: 'مبتدئ',
+    duration_hours: 10,
+    prerequisites: ['لا يشترط أي معرفة برمجية أو تقنية مسبقة'],
+    learning_objectives: [
+      'فهم البنية الأساسية للحاسوب والمعالج والذاكرة',
+      'معرفة كيف تسافر رسائل الإنترنت ومفهوم الـ IP والـ DNS',
+      'استيعاب مثلث الحماية والأمن الرقمي CIA Triad',
+      'مبادئ التشفير المتناظر وغير المتناظر والتجزئة',
+      'طرق الحماية من التصيد والهندسة الاجتماعية'
+    ],
+    cover_image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80',
+    is_published: true,
+    total_lessons: 4,
+    created_at: '2026-02-10T10:00:00Z'
+  },
+  {
+    id: 'course-prog-101',
+    slug: 'python-cyber-automation',
+    path_slug: 'programming',
+    title: 'برمجة بايثون للأمن السيبراني وأتمتة الشبكات',
+    description: 'دورة عملية مكثفة تركز على توظيف Python وBash في كتابة أدوات الفحص، الاتصال بالمنافذ، وسحب البيانات وتحليل السجلات بأمان.',
+    level: 'مبتدئ إلى متوسط',
+    duration_hours: 16,
+    prerequisites: ['معرفة بسيطة باستخدام الحاسوب أو لغة لينكس'],
+    learning_objectives: [
+      'إتقان المتغيرات، الدوال، والهياكل البيانية في Python',
+      'برمجة أداة فحص منافذ متزامنة باستخدام مكتبة socket',
+      'سحب وتحليل استجابات الويب والترويسات Headers عبر requests',
+      'كتابة سكربتات باش لأتمتة فحص وتأمين السيرفرات',
+      'فلترة ملفات الـ Access Logs واستخراج محاولات الاختراق'
+    ],
+    cover_image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
+    is_published: true,
+    total_lessons: 4,
+    created_at: '2026-02-15T10:00:00Z'
+  },
   {
     id: 'course-net-101',
     slug: 'network-fundamentals',
