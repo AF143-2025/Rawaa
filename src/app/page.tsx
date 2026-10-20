@@ -52,7 +52,7 @@ export default function HomePage() {
     <div className="space-y-24 pb-20 cyber-grid bg-white min-h-screen">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-3 sm:pt-5 md:pt-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+      <section id="hero" className="relative pt-3 sm:pt-5 md:pt-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
         {/* Soft pastel ambient glow orbs */}
         <div className="absolute top-5 right-1/4 w-96 h-96 glow-orb-cyan pointer-events-none" />
         <div className="absolute top-11 left-1/4 w-96 h-96 glow-orb-green pointer-events-none" />
@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. REAL STATS COUNTER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="stats" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm backdrop-blur-sm">
           <div className="text-center space-y-1">
             <span className="text-2xl sm:text-4xl font-extrabold text-sky-600 font-mono">
@@ -181,7 +181,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. LEARNING TRACKS SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="tracks" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <span className="text-xs font-mono text-sky-600 uppercase tracking-widest font-bold">
             CURRICULUM ROADMAP
@@ -263,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. LATEST COURSES SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="courses" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <span className="text-xs font-mono text-emerald-600 uppercase tracking-widest font-bold">
@@ -338,7 +338,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. INTERACTIVE LABS SHOWCASE */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="labs" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             
@@ -427,7 +427,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. EDUCATIONAL CYBER CHALLENGES PREVIEW */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="challenges" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <span className="text-xs font-mono text-indigo-600 uppercase tracking-widest font-bold">
             CAPTURE THE FLAG (CTF)
@@ -481,7 +481,7 @@ export default function HomePage() {
       </section>
 
       {/* 7. PLATFORM FEATURES */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <span className="text-xs font-mono text-sky-600 uppercase tracking-widest font-bold">
             WHY RAWAA ACADEMY
@@ -526,7 +526,7 @@ export default function HomePage() {
       </section>
 
       {/* 8. HOW LEARNING WORKS METHODOLOGY */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="methodology" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <span className="text-xs font-mono text-sky-600 uppercase tracking-widest font-bold">
             METHODOLOGY
@@ -573,7 +573,7 @@ export default function HomePage() {
       </section>
 
       {/* 9. FAQ SECTION */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section id="faq" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-3">
           <span className="text-xs font-mono text-sky-600 uppercase tracking-widest font-bold">
             FREQUENTLY ASKED QUESTIONS
