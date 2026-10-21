@@ -8,14 +8,14 @@ import { ArrowRight } from 'lucide-react';
 
 export default function LinuxPage() {
   return (
-    <div className="relative cyber-grid bg-white min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-8">
+    <div className="relative cyber-grid bg-white min-h-screen py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-8">
       <HelloKittyScrollCompanion stickerSrc="/brand/kitty_linux.jpg" />
 
-      {/* Breadcrumb */}
-      <div className="flex items-center gap-2 text-xs text-slate-500">
-        <Link href="/" className="hover:text-slate-900 transition-colors">الرئيسية</Link>
-        <span>/</span>
-        <span className="text-emerald-600 font-bold">دليل إدارة أنظمة وسيرفرات Linux الشامل 🐧🛡️</span>
+      {/* Centered Title */}
+      <div className="text-center py-1">
+        <span className="text-sm sm:text-base font-black text-emerald-600">
+          دليل إدارة أنظمة وسيرفرات Linux الشامل 🐧
+        </span>
       </div>
 
       <LinuxSection />
@@ -26,7 +26,7 @@ export default function LinuxPage() {
           className="inline-flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-emerald-600 transition-colors"
         >
           <ArrowRight className="w-4 h-4" />
-          <span>العودة إلى الصفحة الرئيسية لمنصة رواء</span>
+          <span>العودة إلى منصة رواء</span>
         </Link>
       </div>
     </div>
