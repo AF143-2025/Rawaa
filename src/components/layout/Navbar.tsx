@@ -154,22 +154,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Backdrop overlay for outside tap to close */}
-      {mobileMenuOpen && (
-        <div 
-          onClick={() => setMobileMenuOpen(false)}
-          className="fixed inset-0 bg-slate-900/20 backdrop-blur-xs z-30 md:hidden pointer-events-auto animate-in fade-in duration-200"
-          aria-hidden="true"
-        />
-      )}
-
       {/* =========================================================================
-          FULL HEIGHT MOBILE SECTIONS MENU (ينزلن لي جوه على ملئ الشاشة مع بقاء النافبار عائم)
+          FLOATING MOBILE SECTIONS MENU (يفتح الأقسام تحت النافبار العائم ويبقى ثابتاً)
           ========================================================================= */}
       {mobileMenuOpen && (
-        <div className="fixed inset-x-3 sm:inset-x-6 top-[4.75rem] sm:top-[5.5rem] bottom-3 sm:bottom-4 max-w-7xl mx-auto z-40 md:hidden bg-white/98 backdrop-blur-2xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-4 pointer-events-auto flex flex-col justify-between animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden mt-2 max-w-7xl mx-auto bg-white/98 backdrop-blur-2xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-4 pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200">
           
-          <div className="flex-1 flex flex-col justify-evenly gap-2 overflow-y-auto py-1">
+          <div className="grid grid-cols-1 gap-2">
             {mobileNavItems.map(item => {
               const isActive = pathname === item.href;
               const IconComponent = item.icon;
@@ -210,7 +201,7 @@ export default function Navbar() {
           </div>
 
           {/* Quick hello kitty ribbon at the bottom of dropdown */}
-          <div className="mt-2 pt-2.5 border-t border-slate-100 flex items-center justify-between px-1 shrink-0">
+          <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between px-1">
             <div className="flex items-center gap-2">
               <img
                 src="/brand/kitty_foundations.jpg"
