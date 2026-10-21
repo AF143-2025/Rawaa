@@ -120,11 +120,11 @@ export default function QuizPlayer({ quiz, onFinish }: QuizPlayerProps) {
                 تم إصدار شهادة إتمام رسمية لك! يمكنك استعراضها وتحميلها من صفحة الشهادات.
               </span>
               <Link
-                href="/dashboard"
+                href="/verify"
                 className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs transition-colors flex items-center gap-2"
               >
                 <Award className="w-4 h-4" />
-                عرض الشهادة في لوحة التحكم
+                التحقق من الشهادات
               </Link>
             </div>
           ) : (

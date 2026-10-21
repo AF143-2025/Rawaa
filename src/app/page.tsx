@@ -16,7 +16,7 @@ export default function HomePage() {
       <HelloKittyScrollCompanion />
       
       {/* Main Content Sections Flow */}
-      <div className="relative z-10 flex flex-col space-y-10 sm:space-y-14 pt-7 sm:pt-10 md:pt-12 pb-8 sm:pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col space-y-12 sm:space-y-16 pt-7 sm:pt-10 md:pt-12 pb-16 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 1. HERO SECTION: BRAND LOGO WITH HELLO KITTY FLANKING */}
         <section id="hero" className="relative w-full overflow-hidden scroll-mt-28 pt-2 sm:pt-4">

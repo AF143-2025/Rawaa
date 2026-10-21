@@ -7,14 +7,12 @@ import {
   Menu, 
   X, 
   ArrowLeft,
-  BookOpen,
   Home,
   Shield,
   Network,
   Terminal,
   Code2,
-  Cpu,
-  Sparkles
+  Cpu
 } from 'lucide-react';
 import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
@@ -34,7 +32,7 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  // Primary desktop & quick links
+  // Primary navigation links across the platform
   const primaryLinks = [
     { label: 'الرئيسية', href: '/' },
     { label: 'الأساسات', href: '/foundations' },
@@ -43,13 +41,13 @@ export default function Navbar() {
     { label: 'البرمجة', href: '/programming' },
   ];
 
-  // Full-screen mobile navigation items
+  // Full-screen mobile navigation items (Clean, direct & organized)
   const fullScreenNavItems = [
     { 
       label: 'الرئيسية', 
       href: '/', 
       icon: Home, 
-      desc: 'الواجهة الرئيسية والترحيب بنصائح هيلو كيتي',
+      desc: 'الواجهة الرئيسية ونصائح هيلو كيتي التوجيهية',
       color: 'text-pink-600',
       bg: 'bg-pink-50',
       border: 'border-pink-200'
@@ -58,7 +56,7 @@ export default function Navbar() {
       label: 'الأساسات التقنية', 
       href: '/foundations', 
       icon: Shield, 
-      desc: 'مبادئ الأمن السيبراني ومثلث الـ CIA',
+      desc: 'مبادئ الأمن السيبراني الشاملة ومثلث الـ CIA',
       color: 'text-sky-600',
       bg: 'bg-sky-50',
       border: 'border-sky-200'
@@ -67,7 +65,7 @@ export default function Navbar() {
       label: 'هندسة الشبكات', 
       href: '/networks', 
       icon: Network, 
-      desc: 'مسار الحزم والـ OSI ومحاكي Subnetting',
+      desc: 'مسار الحزم ونموذج الـ OSI ومحاكي Subnetting',
       color: 'text-cyan-600',
       bg: 'bg-cyan-50',
       border: 'border-cyan-200'
@@ -76,7 +74,7 @@ export default function Navbar() {
       label: 'إدارة أنظمة Linux', 
       href: '/linux', 
       icon: Terminal, 
-      desc: 'الطرفية والصلاحيات وخدمات السيرفرات',
+      desc: 'الطرفية والصلاحيات والخدمات والأنابيب',
       color: 'text-emerald-600',
       bg: 'bg-emerald-50',
       border: 'border-emerald-200'
@@ -85,19 +83,10 @@ export default function Navbar() {
       label: 'البرمجة والأتمتة', 
       href: '/programming', 
       icon: Code2, 
-      desc: 'أتمتة بايثون وباش وكواشف المنافذ',
+      desc: 'سكربتات بايثون وباش الأمنية ومحلل السجلات',
       color: 'text-amber-600',
       bg: 'bg-amber-50',
       border: 'border-amber-200'
-    },
-    { 
-      label: 'دليل الدورات التدريبية', 
-      href: '/courses', 
-      icon: BookOpen, 
-      desc: 'المناهج التعليمية الكاملة والدروس التطبيقية',
-      color: 'text-indigo-600',
-      bg: 'bg-indigo-50',
-      border: 'border-indigo-200'
     },
     { 
       label: 'المختبرات التفاعلية', 
@@ -111,7 +100,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 lg:px-8 pointer-events-none transition-all duration-300">
+    <header className="sticky top-3 sm:top-5 z-50 px-3 sm:px-6 lg:px-8 pointer-events-none transition-all duration-300">
       <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-900/5 pointer-events-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
           
@@ -121,14 +110,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links (الرئيسية، الأساسات، الشبكات، لينكس، البرمجة) */}
-          <nav className="hidden md:flex items-center gap-1.5 lg:gap-2">
+          <nav className="hidden md:flex items-center gap-2 lg:gap-3">
             {primaryLinks.map(link => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3.5 py-2 rounded-xl text-xs lg:text-sm font-bold transition-all ${
+                  className={`px-4 py-2 rounded-xl text-xs lg:text-sm font-bold transition-all ${
                     isActive
                       ? 'bg-sky-50 text-sky-700 border border-sky-200/90 shadow-sm'
                       : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
@@ -140,33 +129,13 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Desktop Direct CTA Button */}
-          <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/courses"
-              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-extrabold text-xs shadow-md shadow-sky-500/20 hover:scale-105 transition-all flex items-center gap-2"
-            >
-              <BookOpen className="w-4 h-4" />
-              <span>دليل الدورات</span>
-              <ArrowLeft className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-
-          {/* Mobile Actions: Courses Quick Button + Triple Icon Hamburger Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <Link
-              href="/courses"
-              className="px-3 py-1.5 rounded-xl bg-sky-500 text-white font-bold text-xs shadow-sm hover:bg-sky-600 transition-colors"
-            >
-              الدورات
-            </Link>
-            
-            {/* The Triple Icon (Hamburger Button) */}
+          {/* Mobile Actions: Clean Triple Icon (Hamburger Button) */}
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="w-10 h-10 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200/90 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
               aria-label="فتح القائمة الرئيسية"
-              title="القائمة"
+              title="القائمة الرئيسية"
             >
               <Menu className="w-5 h-5 text-slate-800" strokeWidth={2.2} />
             </button>
@@ -213,7 +182,7 @@ export default function Navbar() {
           </div>
 
           {/* Scrollable Navigation Body */}
-          <div className="flex-1 px-5 sm:px-6 py-5 space-y-2.5 max-w-lg mx-auto w-full">
+          <div className="flex-1 px-5 sm:px-6 py-6 space-y-3 max-w-lg mx-auto w-full">
             
             {/* List of Navigation Links as Clean Structured Cards */}
             <div className="grid grid-cols-1 gap-2.5">
