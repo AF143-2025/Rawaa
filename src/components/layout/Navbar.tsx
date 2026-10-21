@@ -158,9 +158,9 @@ export default function Navbar() {
           FLOATING MOBILE SECTIONS MENU (يفتح الأقسام تحت النافبار العائم ويبقى ثابتاً)
           ========================================================================= */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-2 max-w-7xl mx-auto bg-white/98 backdrop-blur-2xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-4 pointer-events-auto min-h-[calc(100dvh-5.5rem)] flex flex-col justify-between animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden mt-2 max-w-7xl mx-auto bg-white/98 backdrop-blur-2xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-4 pointer-events-auto h-[calc(100dvh-5.5rem)] max-h-[calc(100dvh-5.5rem)] flex flex-col justify-between animate-in fade-in slide-in-from-top-2 duration-200">
           
-          <div className="grid grid-cols-1 gap-2">
+          <div className="flex-1 flex flex-col justify-between gap-2.5 my-1">
             {mobileNavItems.map(item => {
               const isActive = pathname === item.href;
               const IconComponent = item.icon;
@@ -170,7 +170,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-3.5 py-3 rounded-2xl border transition-all duration-200 flex items-center justify-between gap-3 active:scale-95 ${
+                  className={`flex-1 px-3.5 py-2 sm:py-2.5 rounded-2xl border transition-all duration-200 flex items-center justify-between gap-3 active:scale-95 ${
                     isActive
                       ? 'bg-sky-50 border-sky-300 text-sky-950 font-bold shadow-sm'
                       : 'bg-white hover:bg-slate-50 border-slate-100 text-slate-900 shadow-2xs'
