@@ -47,7 +47,7 @@ export default function Navbar() {
       label: 'الرئيسية', 
       href: '/', 
       icon: Home, 
-      desc: 'الواجهة الرئيسية ونصائح هيلو كيتي التوجيهية',
+      desc: 'الواجهة الرئيسية والترحيب بنصائح هيلو كيتي',
       color: 'text-pink-600',
       bg: 'bg-pink-50',
       border: 'border-pink-200'
@@ -102,22 +102,24 @@ export default function Navbar() {
   return (
     <header className="sticky top-3 sm:top-5 z-50 px-3 sm:px-6 lg:px-8 pointer-events-none transition-all duration-300">
       <div className="max-w-7xl mx-auto bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-900/5 pointer-events-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="relative flex items-center justify-between h-16 sm:h-20">
           
-          {/* Logo & Brand */}
-          <Link href="/" className="group focus:outline-none flex items-center">
-            <RawaaAnimatedLogo variant="navbar" />
-          </Link>
+          {/* Right: Logo & Brand */}
+          <div className="flex items-center shrink-0">
+            <Link href="/" className="group focus:outline-none flex items-center">
+              <RawaaAnimatedLogo variant="navbar" />
+            </Link>
+          </div>
 
-          {/* Desktop Navigation Links (الرئيسية، الأساسات، الشبكات، لينكس، البرمجة) */}
-          <nav className="hidden md:flex items-center gap-2 lg:gap-3">
+          {/* Center: Perfectly Centered Navigation Links on Desktop (الكلام بالنص) */}
+          <nav className="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 gap-1.5 lg:gap-2.5">
             {primaryLinks.map(link => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-xl text-xs lg:text-sm font-bold transition-all ${
+                  className={`px-3.5 lg:px-4 py-2 rounded-xl text-xs lg:text-sm font-bold transition-all ${
                     isActive
                       ? 'bg-sky-50 text-sky-700 border border-sky-200/90 shadow-sm'
                       : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
@@ -129,11 +131,24 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Mobile Actions: Clean Triple Icon (Hamburger Button) */}
-          <div className="md:hidden flex items-center">
+          {/* Left: Desktop Decorative Balance Badge + Mobile Triple Icon Button */}
+          <div className="flex items-center gap-2 shrink-0">
+            {/* Desktop Left Balancing Ribbon */}
+            <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-50/70 border border-pink-200/80 shadow-2xs select-none">
+              <img
+                src="/brand/kitty_foundations.jpg"
+                alt="هيلو كيتي"
+                className="w-5 h-5 object-contain rounded-md"
+              />
+              <span className="text-[11px] font-bold text-pink-700">
+                أكاديمية رواء 🌸
+              </span>
+            </div>
+
+            {/* Mobile Actions: Clean Triple Icon (Hamburger Button) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="w-10 h-10 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200/90 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
+              className="md:hidden w-10 h-10 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200/90 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
               aria-label="فتح القائمة الرئيسية"
               title="القائمة الرئيسية"
             >
