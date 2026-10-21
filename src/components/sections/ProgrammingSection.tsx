@@ -852,24 +852,18 @@ s.close()`}
               <span className="text-lg">⚡🏆</span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-semibold">
-              « بعد أن فهمتِ الأساسات والشبكات ولينكس والبرمجة، أصبحتِ مؤهلة تماماً لخوض غمار التحديات العملية ومختبرات الـ CTF بكل ثقة وجدارة! »
+              « بعد أن فهمتِ الأساسات والشبكات ولينكس والبرمجة، أصبحتِ مؤهلة تماماً لخوض غمار التحديات والتميز في عالم الأمن السيبراني بكل ثقة وجدارة! »
             </p>
           </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-3 shrink-0">
           <Link
-            href="/labs"
-            className="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-all flex items-center gap-2 shadow-sm"
+            href="/"
+            className="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition-all flex items-center gap-2 shadow-md shadow-amber-600/25 active:scale-95"
           >
-            <span>المختبرات وتحديات CTF 🛡️</span>
+            <span>العودة إلى الرئيسية 🌸</span>
             <ArrowLeft className="w-3.5 h-3.5" />
-          </Link>
-          <Link
-            href="/tracks/programming"
-            className="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition-all flex items-center gap-2 shadow-md shadow-amber-600/25"
-          >
-            <span>اختبار كفاءة البرمجة 🎓</span>
           </Link>
         </div>
       </div>

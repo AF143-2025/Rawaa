@@ -11,8 +11,8 @@ import {
   Shield,
   Network,
   Terminal,
-  Code2,
-  Cpu
+  Code2
+
 } from 'lucide-react';
 import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
@@ -75,15 +75,6 @@ export default function Navbar() {
       color: 'text-amber-600',
       bg: 'bg-amber-50',
       border: 'border-amber-200'
-    },
-    { 
-      label: 'المختبرات التفاعلية', 
-      href: '/labs', 
-      icon: Cpu, 
-      desc: 'المحاكيات الحية والطرفية المعزولة',
-      color: 'text-purple-600',
-      bg: 'bg-purple-50',
-      border: 'border-purple-200'
     },
   ];
 
