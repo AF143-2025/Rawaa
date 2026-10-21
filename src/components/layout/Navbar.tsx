@@ -164,11 +164,11 @@ export default function Navbar() {
             {/* The Triple Icon (Hamburger Button) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 rounded-xl bg-slate-100 hover:bg-pink-50 text-slate-700 hover:text-pink-600 border border-slate-200/80 transition-all cursor-pointer shadow-sm active:scale-95"
+              className="w-10 h-10 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200/90 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95"
               aria-label="فتح القائمة الرئيسية"
-              title="القائمة الرئيسية"
+              title="القائمة"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5 text-slate-800" strokeWidth={2.2} />
             </button>
           </div>
 
@@ -213,16 +213,9 @@ export default function Navbar() {
           </div>
 
           {/* Scrollable Navigation Body */}
-          <div className="flex-1 px-5 sm:px-6 py-6 space-y-4 max-w-lg mx-auto w-full">
+          <div className="flex-1 px-5 sm:px-6 py-5 space-y-2.5 max-w-lg mx-auto w-full">
             
-            <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-              <span className="text-xs font-extrabold text-slate-800">أقسام ومنارات رواء التعليمية</span>
-              <span className="text-[10px] font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full border border-pink-200">
-                منصتج المتكاملة 🌸
-              </span>
-            </div>
-
-            {/* List of Navigation Links as Rich Touch Cards */}
+            {/* List of Navigation Links as Clean Structured Cards */}
             <div className="grid grid-cols-1 gap-2.5">
               {fullScreenNavItems.map(item => {
                 const isActive = pathname === item.href;
@@ -233,10 +226,10 @@ export default function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`p-3.5 rounded-2xl border transition-all flex items-center justify-between gap-3 active:scale-[0.98] ${
+                    className={`px-4 py-3 rounded-2xl border transition-all flex items-center justify-between gap-3 active:scale-[0.98] ${
                       isActive
-                        ? 'bg-sky-50/90 border-sky-300 shadow-sm'
-                        : 'bg-white hover:bg-slate-50 border-slate-200/90 shadow-sm'
+                        ? 'bg-sky-50/90 border-sky-300 text-sky-950 shadow-sm'
+                        : 'bg-white hover:bg-slate-50 border-slate-200/90 text-slate-900 shadow-sm'
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -244,19 +237,17 @@ export default function Navbar() {
                         <IconComponent className="w-5 h-5" />
                       </div>
                       <div className="text-right">
-                        <span className={`text-xs sm:text-sm font-extrabold block ${
-                          isActive ? 'text-sky-900' : 'text-slate-900'
-                        }`}>
+                        <span className="text-sm font-black block">
                           {item.label}
                         </span>
-                        <span className="text-[10px] sm:text-[11px] text-slate-500 block line-clamp-1 font-medium">
+                        <span className="text-[11px] text-slate-500 block font-medium">
                           {item.desc}
                         </span>
                       </div>
                     </div>
 
                     <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                      isActive ? 'bg-sky-200/60 text-sky-700' : 'bg-slate-100 text-slate-400'
+                      isActive ? 'bg-sky-200/70 text-sky-800' : 'bg-slate-100 text-slate-400'
                     }`}>
                       <ArrowLeft className="w-4 h-4" />
                     </div>
