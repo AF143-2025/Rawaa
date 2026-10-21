@@ -158,7 +158,7 @@ export default function Navbar() {
           FLOATING MOBILE SECTIONS MENU (يفتح الأقسام تحت النافبار العائم ويبقى ثابتاً)
           ========================================================================= */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-2 max-w-7xl mx-auto bg-white/98 backdrop-blur-2xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-4 pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden mt-2 max-w-7xl mx-auto bg-white/98 backdrop-blur-2xl border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-4 pointer-events-auto min-h-[calc(100dvh-5.5rem)] flex flex-col justify-between animate-in fade-in slide-in-from-top-2 duration-200">
           
           <div className="grid grid-cols-1 gap-2">
             {mobileNavItems.map(item => {
@@ -201,7 +201,7 @@ export default function Navbar() {
           </div>
 
           {/* Quick hello kitty ribbon at the bottom of dropdown */}
-          <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between px-1">
+          <div className="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between px-1 shrink-0">
             <div className="flex items-center gap-2">
               <img
                 src="/brand/kitty_foundations.jpg"
