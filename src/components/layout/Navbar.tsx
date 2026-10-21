@@ -100,7 +100,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3.5 lg:px-4 py-2 rounded-xl text-xs lg:text-sm font-bold transition-all duration-200 active:scale-90 hover:scale-105 ${
+                  className={`px-3.5 lg:px-4 py-2 rounded-xl text-xs lg:text-sm font-bold transition-colors duration-150 ${
                     isActive
                       ? 'bg-sky-50 text-sky-700 border border-sky-200/90 shadow-sm scale-100'
                       : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
@@ -161,7 +161,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`flex-1 px-3.5 py-2 sm:py-2.5 rounded-2xl border transition-all duration-200 flex items-center justify-between gap-3 active:scale-95 ${
+                  className={`flex-1 px-3.5 py-2 sm:py-2.5 rounded-2xl border transition-colors duration-150 flex items-center justify-between gap-3 ${
                     isActive
                       ? 'bg-sky-50 border-sky-300 text-sky-950 font-bold shadow-sm'
                       : 'bg-white hover:bg-slate-50 border-slate-100 text-slate-900 shadow-2xs'
