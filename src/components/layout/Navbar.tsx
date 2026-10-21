@@ -1,13 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
   Menu, 
   X, 
   ArrowLeft,
-  BookOpen
+  BookOpen,
+  Home,
+  Shield,
+  Network,
+  Terminal,
+  Code2,
+  Cpu,
+  Sparkles
 } from 'lucide-react';
 import RawaaAnimatedLogo from '@/components/brand/RawaaAnimatedLogo';
 
@@ -15,13 +22,92 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // The 5 primary links as requested: الرئيسية، الأساسات، الشبكات، لينكس، البرمجة
+  // Lock background scroll when full-screen mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  // Primary desktop & quick links
   const primaryLinks = [
     { label: 'الرئيسية', href: '/' },
     { label: 'الأساسات', href: '/foundations' },
     { label: 'الشبكات', href: '/networks' },
     { label: 'لينكس', href: '/linux' },
     { label: 'البرمجة', href: '/programming' },
+  ];
+
+  // Full-screen mobile navigation items
+  const fullScreenNavItems = [
+    { 
+      label: 'الرئيسية', 
+      href: '/', 
+      icon: Home, 
+      desc: 'الواجهة الرئيسية والترحيب بنصائح هيلو كيتي',
+      color: 'text-pink-600',
+      bg: 'bg-pink-50',
+      border: 'border-pink-200'
+    },
+    { 
+      label: 'الأساسات التقنية', 
+      href: '/foundations', 
+      icon: Shield, 
+      desc: 'مبادئ الأمن السيبراني ومثلث الـ CIA',
+      color: 'text-sky-600',
+      bg: 'bg-sky-50',
+      border: 'border-sky-200'
+    },
+    { 
+      label: 'هندسة الشبكات', 
+      href: '/networks', 
+      icon: Network, 
+      desc: 'مسار الحزم والـ OSI ومحاكي Subnetting',
+      color: 'text-cyan-600',
+      bg: 'bg-cyan-50',
+      border: 'border-cyan-200'
+    },
+    { 
+      label: 'إدارة أنظمة Linux', 
+      href: '/linux', 
+      icon: Terminal, 
+      desc: 'الطرفية والصلاحيات وخدمات السيرفرات',
+      color: 'text-emerald-600',
+      bg: 'bg-emerald-50',
+      border: 'border-emerald-200'
+    },
+    { 
+      label: 'البرمجة والأتمتة', 
+      href: '/programming', 
+      icon: Code2, 
+      desc: 'أتمتة بايثون وباش وكواشف المنافذ',
+      color: 'text-amber-600',
+      bg: 'bg-amber-50',
+      border: 'border-amber-200'
+    },
+    { 
+      label: 'دليل الدورات التدريبية', 
+      href: '/courses', 
+      icon: BookOpen, 
+      desc: 'المناهج التعليمية الكاملة والدروس التطبيقية',
+      color: 'text-indigo-600',
+      bg: 'bg-indigo-50',
+      border: 'border-indigo-200'
+    },
+    { 
+      label: 'المختبرات التفاعلية', 
+      href: '/labs', 
+      icon: Cpu, 
+      desc: 'المحاكيات الحية والطرفية المعزولة',
+      color: 'text-purple-600',
+      bg: 'bg-purple-50',
+      border: 'border-purple-200'
+    },
   ];
 
   return (
@@ -54,7 +140,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Direct CTA Button */}
+          {/* Desktop Direct CTA Button */}
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/courses"
@@ -66,66 +152,138 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Actions: Courses Quick Button + Triple Icon Hamburger Button */}
           <div className="md:hidden flex items-center gap-2">
             <Link
               href="/courses"
-              className="px-3 py-1.5 rounded-xl bg-sky-500 text-white font-bold text-xs"
+              className="px-3 py-1.5 rounded-xl bg-sky-500 text-white font-bold text-xs shadow-sm hover:bg-sky-600 transition-colors"
             >
               الدورات
             </Link>
+            
+            {/* The Triple Icon (Hamburger Button) */}
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl bg-slate-100 text-slate-700 hover:text-slate-900 cursor-pointer"
+              onClick={() => setMobileMenuOpen(true)}
+              className="p-2 rounded-xl bg-slate-100 hover:bg-pink-50 text-slate-700 hover:text-pink-600 border border-slate-200/80 transition-all cursor-pointer shadow-sm active:scale-95"
+              aria-label="فتح القائمة الرئيسية"
+              title="القائمة الرئيسية"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <Menu className="w-6 h-6" />
             </button>
           </div>
 
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* =========================================================================
+          FULL-SCREEN MOBILE MENU OVERLAY (تظهر على كل الشاشة بدون تغيير شكل المنصة)
+          ========================================================================= */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white/98 backdrop-blur-xl border border-slate-200 mt-2 rounded-2xl px-4 pt-4 pb-6 space-y-4 shadow-2xl max-h-[80vh] overflow-y-auto pointer-events-auto">
-          
-          <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-            <span className="text-xs font-bold text-slate-800">أقسام المنصة</span>
-            <span className="text-[10px] text-sky-600 font-mono font-bold">RAWAA ACADEMY</span>
-          </div>
-
-          {/* Primary Quick Links for Mobile */}
-          <div className="grid grid-cols-1 gap-2">
-            {primaryLinks.map(link => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`p-3 rounded-xl border text-xs font-bold flex items-center justify-between transition-colors ${
-                    isActive
-                      ? 'bg-sky-50 border-sky-200 text-sky-700'
-                      : 'bg-slate-50/70 border-slate-100 hover:bg-sky-50 text-slate-800'
-                  }`}
-                >
-                  <span>{link.label}</span>
-                  <ArrowLeft className="w-3.5 h-3.5 text-slate-400" />
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Mobile CTA */}
-          <div className="pt-2 border-t border-slate-100">
-            <Link
-              href="/courses"
+        <div 
+          className="fixed inset-0 z-[100] bg-white/98 backdrop-blur-2xl flex flex-col justify-between overflow-y-auto pointer-events-auto animate-in fade-in zoom-in-95 duration-200"
+          style={{ height: '100dvh' }}
+        >
+          {/* Top Bar inside Full-Screen Menu */}
+          <div className="sticky top-0 bg-white/95 backdrop-blur-md border-b border-slate-100 px-5 sm:px-6 py-4 flex items-center justify-between z-10 shadow-sm">
+            <Link 
+              href="/" 
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-extrabold text-xs shadow-md shadow-sky-500/20 flex items-center justify-center gap-2"
+              className="flex items-center gap-2 focus:outline-none"
             >
-              <BookOpen className="w-4 h-4" />
-              <span>دليل الدورات التدريبية</span>
+              <RawaaAnimatedLogo variant="navbar" />
+              <div className="text-right">
+                <span className="text-sm font-black text-slate-900 block leading-tight">
+                  رواء | RAWAA
+                </span>
+                <span className="text-[10px] font-mono text-sky-600 font-bold block">
+                  CYBER ACADEMY
+                </span>
+              </div>
             </Link>
+
+            {/* Clear Close Button */}
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="p-2.5 rounded-2xl bg-slate-100 hover:bg-pink-100 text-slate-700 hover:text-pink-600 transition-all cursor-pointer shadow-sm active:scale-95 flex items-center gap-1.5"
+              aria-label="إغلاق القائمة"
+            >
+              <span className="text-xs font-bold pl-1 hidden xs:inline">إغلاق</span>
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Scrollable Navigation Body */}
+          <div className="flex-1 px-5 sm:px-6 py-6 space-y-4 max-w-lg mx-auto w-full">
+            
+            <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+              <span className="text-xs font-extrabold text-slate-800">أقسام ومنارات رواء التعليمية</span>
+              <span className="text-[10px] font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full border border-pink-200">
+                منصتج المتكاملة 🌸
+              </span>
+            </div>
+
+            {/* List of Navigation Links as Rich Touch Cards */}
+            <div className="grid grid-cols-1 gap-2.5">
+              {fullScreenNavItems.map(item => {
+                const isActive = pathname === item.href;
+                const IconComponent = item.icon;
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`p-3.5 rounded-2xl border transition-all flex items-center justify-between gap-3 active:scale-[0.98] ${
+                      isActive
+                        ? 'bg-sky-50/90 border-sky-300 shadow-sm'
+                        : 'bg-white hover:bg-slate-50 border-slate-200/90 shadow-sm'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`w-10 h-10 rounded-xl ${item.bg} border ${item.border} ${item.color} flex items-center justify-center shrink-0 shadow-sm`}>
+                        <IconComponent className="w-5 h-5" />
+                      </div>
+                      <div className="text-right">
+                        <span className={`text-xs sm:text-sm font-extrabold block ${
+                          isActive ? 'text-sky-900' : 'text-slate-900'
+                        }`}>
+                          {item.label}
+                        </span>
+                        <span className="text-[10px] sm:text-[11px] text-slate-500 block line-clamp-1 font-medium">
+                          {item.desc}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                      isActive ? 'bg-sky-200/60 text-sky-700' : 'bg-slate-100 text-slate-400'
+                    }`}>
+                      <ArrowLeft className="w-4 h-4" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+
+          </div>
+
+          {/* Bottom Footer inside Full-Screen Menu */}
+          <div className="sticky bottom-0 bg-white/95 backdrop-blur-md border-t border-slate-100 px-5 sm:px-6 py-4 shadow-inner">
+            <div className="max-w-lg mx-auto w-full flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <img
+                  src="/brand/kitty_foundations.jpg"
+                  alt="هيلو كيتي"
+                  className="w-7 h-7 object-contain rounded-lg"
+                />
+                <span className="text-[11px] font-bold text-pink-700">
+                  برفقة هيلو كيتي لدعم طموحج يا رواء 🌸✨
+                </span>
+              </div>
+              <span className="text-[10px] font-mono text-slate-400 font-bold">
+                RAWAA v2.0
+              </span>
+            </div>
           </div>
 
         </div>

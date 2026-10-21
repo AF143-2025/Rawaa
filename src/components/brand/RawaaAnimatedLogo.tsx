@@ -64,7 +64,7 @@ export default function RawaaAnimatedLogo({
       <div className="relative z-10 animate-logo-float flex flex-col items-center">
 
         {/* Orbiting Circles Container */}
-        <div className="relative w-72 sm:w-80 md:w-96 aspect-square flex items-center justify-center">
+        <div className="relative w-64 sm:w-80 md:w-96 aspect-square flex items-center justify-center">
 
           {/* ============ ORBIT RING 1 (outermost, slow clockwise) ============ */}
           <div className="absolute inset-0 animate-orbit-1 pointer-events-none">
@@ -107,7 +107,7 @@ export default function RawaaAnimatedLogo({
             <img
               src="/brand/rawaa_exact_logo_clean.png"
               alt="شعار رواء"
-              className="w-52 sm:w-60 md:w-72 h-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] drop-shadow-[0_12px_32px_rgba(2,132,199,0.30)] filter contrast-[1.05]"
+              className="w-48 sm:w-60 md:w-72 h-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.18)] drop-shadow-[0_12px_32px_rgba(2,132,199,0.30)] filter contrast-[1.05]"
             />
           </div>
 
