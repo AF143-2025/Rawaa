@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { notFound, useParams, useRouter } from 'next/navigation';
 import { dataStore } from '@/lib/store';
-import { useAuth } from '@/context/AuthContext';
+
 import { 
   BookOpen, 
   Clock, 
@@ -29,7 +29,7 @@ export default function LessonDetailPage() {
   const lessonSlug = params?.lessonSlug as string;
 
   const data = dataStore.getLesson(courseSlug, lessonSlug);
-  const { user } = useAuth();
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
 

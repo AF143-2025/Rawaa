@@ -21,7 +21,7 @@ import {
   INITIAL_ACHIEVEMENTS, 
   INITIAL_ANNOUNCEMENTS 
 } from './mockData';
-import { supabase, isSupabaseConfigured } from './supabase';
+
 
 const STORAGE_KEYS = {
   CURRENT_USER: 'rawaa_current_user',

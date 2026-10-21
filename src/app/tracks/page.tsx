@@ -92,10 +92,10 @@ export default function TracksPage() {
 
               <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
                 <Link
-                  href={`/tracks/${track.slug}`}
+                  href={track.slug === 'networks' ? '/networks' : track.slug === 'linux' ? '/linux' : track.slug === 'programming' ? '/programming' : '/foundations'}
                   className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-extrabold text-xs shadow-md shadow-sky-500/20 transition-all flex items-center gap-2"
                 >
-                  استعراض المسار والدورات
+                  استعراض المسار والمحطات
                   <ArrowLeft className="w-4 h-4" />
                 </Link>
                 <span className="text-xs font-mono text-slate-400">{track.slug}</span>

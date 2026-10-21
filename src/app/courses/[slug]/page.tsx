@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { dataStore } from '@/lib/store';
-import { useAuth } from '@/context/AuthContext';
+
 import { 
   BookOpen, 
   Clock, 
@@ -21,7 +21,7 @@ export default function CourseDetailPage() {
   const params = useParams();
   const router = useRouter();
   const slug = params?.slug as string;
-  const { user } = useAuth();
+
 
   const [course, setCourse] = useState(dataStore.getCourseBySlug(slug));
   const [enrollment, setEnrollment] = useState(dataStore.getEnrollments().find(e => e.course_id === course?.id));
